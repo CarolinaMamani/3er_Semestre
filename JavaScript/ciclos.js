@@ -46,8 +46,20 @@ console.log('Fin de ciclo FOR con BREAK')
 // CONTINUE (palabra reservada)
 //vamos a preguntar si el numero NO es par
 for(let con=0 ; con <=10 ; con++){
-    if(con %2 !== 0){
+    if(con %2 !== 0){ //si es impar, entra y con continue los IGNORA
         continue; //esto va a continuar a la siguiente iteracion
     }
+    console.log(con);
 }
-console.log('Fir del ciclo for con CONTINUE')
+console.log('Fir del ciclo for con CONTINUE');
+
+
+// ETIQUETAS LEBELS
+//
+for(let co=0; co <=10; co++){
+    if(co %2 !==0) {
+        continue;
+    }
+    console.log(co);
+}
+console.log('Fin de ciclo con LABELS')
