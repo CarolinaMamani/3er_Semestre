@@ -55,11 +55,13 @@ console.log('Fir del ciclo for con CONTINUE');
 
 
 // ETIQUETAS LEBELS
-//
+// nos permiten ir a una parte del programa que deseamos
+inicio:
 for(let co=0; co <=10; co++){
     if(co %2 !==0) {
-        continue;
+        break inicio; //indica que rompa el ciclo for es donde esta la etiqueta labels
     }
     console.log(co);
 }
-console.log('Fin de ciclo con LABELS')
+console.log('Fin de ciclo con LABELS');
+//NO es recomendado usar las LABELS, ya no se usan
