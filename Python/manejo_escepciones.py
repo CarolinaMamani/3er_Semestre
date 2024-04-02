@@ -52,7 +52,7 @@ print(f'El resultado es: {resultado}')
 print('Seguimos....')
 
 #-----------------------------------------------------
-#Podemos crear clases de excepcion personalizadas
+#Podemos crear clases de excepcion personalizadas ver file>>> NumerosIgualesException
 
 
 
