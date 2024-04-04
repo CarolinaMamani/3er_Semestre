@@ -11,9 +11,15 @@ public class mundoPC {
         Raton ratonGamer = new Raton("USB", "Azus");
         Computadora computadoraGamer = new Computadora("Alien", monitorGamer, tecladoGamer, ratonGamer);
         // agragando elementos, solo podemos hasta 10
-        Orden orden1 = new Orden();
+        Orden orden1 = new Orden(); // arreglo vacio
+        Orden orden2 = new Orden(); // nueva lista para objeto orden2
         orden1.agregarComputadora(computadoraHP);
         orden1.agregarComputadora(computadoraGamer);
         orden1.mostrarOrden();
+
+        Computadora computadorasVarias = new Computadora("Compus de diferentes marcas", monitorGamer, tecladoHP,
+                ratonHP);
+        orden2.agregarComputadora(computadorasVarias);
+        orden2.mostrarOrden();
     }
 }
