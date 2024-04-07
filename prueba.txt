@@ -1,0 +1,3 @@
+Programamos con diferentes tipo de archivos, ahora en txt.
+Como esto terminamos, salto de linea "
+"
