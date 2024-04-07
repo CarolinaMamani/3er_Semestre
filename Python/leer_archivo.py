@@ -1,5 +1,5 @@
-
-archivo = open('prueba.txt','r', encoding= 'utf8')
+#copy path, y pegamos la ruta especifica del archivo
+archivo = open('C:\\Users\\NYOK\\Documents\\405\\3er_Semestre\prueba.txt','r', encoding= 'utf8')
 #r : read
 #print(archivo.read())
 #a: append, anexamos informacion
