@@ -10,11 +10,20 @@ console.log(autos);
 
 //Recorremos los elementos de un arreglo
 // los array comienzan desde 0, tenemos 3 elementos [0] [1] [2]
-console.log(autos[0])
+console.log(autos[0]);
 
 //Recorremos con ciclo cada uno de los elementos
 for (let i = 0; i < autos.length; i++) {
     console.log(i+' : ' +autos[i]);
     
 }
+
+//Modificamos los elementos del arreglo
+autos[1] = 'Chevrolet';
+console.log(autos[1]);
+
+//Agregamos nuevos valores al arreglo
+autos.push('Audi'); //agremoa el elemento al final del arreglo
+console.log(autos); //hay 4 elementos
+
 
