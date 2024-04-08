@@ -24,7 +24,7 @@ Crear una base de datos en la Shell de Mongo
 
 //consulta para ver la base de datos creada
 
-    bd.insertar.find
+    bd.insertar.find()
 
 Clase 4:
 // Creamos base de datos con insertone e insertmany
