@@ -1,4 +1,4 @@
-Clase 4:
+Clase 3:
 Crear una base de datos en la Shell de Mongo
 
 ///Pasos//////
@@ -22,3 +22,6 @@ db.insertar.insert({"nombre":"Carolina","edad":20})
 //consulta para ver la base de datos creada
 
     bd.insertar.find
+
+Clase 4:
+// Creamos base de datos con insertone e insertmany
