@@ -8,6 +8,6 @@ public enum Dias { // por default son constantes en java (public, static, final)
     JUEVES,
     VIERNES,
     SABADO,
-    DOMINGO
+    DOMINGO;
 
 }
