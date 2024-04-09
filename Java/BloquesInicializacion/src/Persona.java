@@ -4,8 +4,9 @@ public class Persona {
 
     private static int contadorPersonas;
 
+    // LOS BLOQUES DE INICIALIZACION NO SON MUY COMUNES DE USAR
     // bloque inicializacion estatico
-    static {
+    static { // SOLO SE EJECUTA UNA VEZ
         System.out.println("Ejecucion del bloque estatico");
         ++Persona.contadorPersonas;
         // idPersona = 10; no es un atributo estatico por esto tenemos un error
@@ -20,12 +21,18 @@ public class Persona {
 
     // Los bloques de inicializacion se ejecutan ANTES del construcctor
 
+    // LO MAS COMUN ES USAR NUESTROS CONSTRUCTORES
     public Persona() { // constructor
         System.out.println("Esta es la ejecucion del construcctor");
     }
 
     public int getIdPersona() {
         return this.idPersona;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona [idPersona=" + idPersona + "]";
     }
 
 }
