@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<li>
+
 
 <!--HEAD/ cabeza-->
-    <meta> Organizacion Empresarial
+    <meta> ORGANIZACION EMPRESARIAL
 
-        <meta charset="utf-8"></meta>
-        <meta name="author" content="Carolina Mamani"></meta>
-        <meta name="description" content= "Aqui va la descripcion del sitio"></meta>
-        <meta name="keywords" content="tutoriales, html, desarrollo web"></meta>
+        <meta charset="utf-8">
+        <meta name="author" content="Carolina Mamani">
+        <meta name="description" content= "Aqui va la descripcion del sitio">
+        <meta name="keywords" content="tutoriales, html, desarrollo web">
 
         <title>" CLASE 5 DE OE"</title>
-        <link rel="icon" href="imagen.png"></link>
+        <link rel="icon" href="imagen.png">
 
     </head>
-    
+
+
 <!--BODY/ cuerpo-->
     <body>
 
-        <header></header>  <!--Encabezado-->
-        <nav></nav> <!--Barra de navegacion-->
+        
+
+
+        <header>--ENCABEZADO--</header>  <!--Encabezado-->
+        <nav>Barra de Navegacion</nav> <!--Barra de navegacion-->
         <section></section> <!--Seccion del sitio-->
         <aside></aside> <!--Columnas-->
         <article></article> <!--escribir Titutlos-->
@@ -26,14 +30,106 @@
         <p></p> <!--para escribir textos-->
         <b></b> <!--para utilizar registros-->
 
+        <img src="fotos/imgen.jpg"> <!--Agrega imagenes-->
+
+        <ol> <!--conjunto de listas numeradas-->
+            <li>auto</li>
+            <li>barco</li>
+            <li>reloj</li>
+        </ol>
+
+        <ul> <!--Lista ordenada con bullet point-->
+            <li>cocina</li>
+            <li>celular</li>
+            <li>pisina</li>
+        </ul>
+
+        <table border="4"> <!--Tablas + border para doble borde de la tabla-->
+            <thead> <!--Titulos de la tabla-->
+                <tr> <!--etiquetas filas-->
+                    <th>MES</th> <!--etiquetas columnas-->
+                    <th>AHORRO</th>
+                </tr>
+            </thead>
+            
+            <tbody> <!--Encierra cada una de las filas y columnas -->
+                <tr>
+                    <td>Enero</td><!--th pasa a <td> en tbody-->
+                    <td>$100</td>
+                </tr>
+
+                <tr>
+                    <td>Febrero</td>
+                    <td>$200</td>
+                </tr>
+            </tbody>
+        </table>
+
+       
+
+        <!--Indicadores de valor-->
+        <h1>Resultado d examenes</h1> <!--<h1> agregamos texto-->
+            <p>Carl: <meter value="94" min="0" max="100" high="90"></meter></p> <!--agrega parrafos <p>-->
+            <p>Al: <meter value="60" min="0" max="100" high="90"></meter></p> <!--<meter> agrega valores de min y max-->
+            <p>Cindy: <meter value="85" min="0" max="100" high="90"></meter></p>
+            <p>Haru: <meter value="45" min="0" max="100" high="90"></meter></p>
+
+
+        <h1>Resuelto de Ventas</h1>
+            <p>Enero: <progress value="94" min="0" max="100"></progress></p>
+            <p>Febrero: <progress value="60" min="0" max="100"></progress></p>
+            <p>Marzo: <progress value="85" min="0" max="100"></progress></p>
+            <p>Abril: <progress value="45" min="0" max="100"></progress></p>
+
+
+        <footer> pie de pagina </footer>
+
+        <!--Maquetacion de imagenes-->
+        <figure>
+            <img src="image/imagen.png">
+        </figure>
+
+        
+        
+
     </body>
 
 <!--STYLE/ para agregar el CSS o estilos de la pagina-->
+<!--Aspectos de la cajas-->
     <style>
         body{
-            background: blue;
+            background: lightblue;
+        }
+
+        #caja{ 
+            width: 200px;
+            height: 200px;
+            background: rgb(222, 126, 177);
+            }
+        
+        .grupo{ 
+            width: 200px;
+            height: 200px;
+            background: rgb(54, 121, 237);
+            margin: 16px;
+        }
+
+        header{
+            width: 1000px;
+            height: 200px;
+            background: rgb(255, 255, 255);
+            margin: 20px;
+            border: 5px solid orange;
+
         }
 
     </style>
+
+    <body>
+        <div id="caja">Caja usando atributo id #caja en style</div> <!--div para generar cajas en la pagina-->
+        <div class="grupo">CAJA usando atributo class .grupo en style</div>
+        <header> Propiedades de forma usando header{} en Style</header>
+
+    </body>
 
 </html>
