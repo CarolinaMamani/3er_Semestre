@@ -5,7 +5,7 @@ try:
     archivo = open('prueba.txt', 'w', encoding = 'utf8') #sino existe lo crea, sino lo abre
 # w: es write 
 #utf8: para acentos
-    archivo.write('Programamos con diferentes tipo de archivos, ahora en txt.\n Los acentos son importantes para las palabras\n')
+    archivo.write('\nProgramamos con diferentes tipo de archivos, ahora en txt.\n Los acentos son importantes para las palabras\n')
     archivo.write('como por ejemplo acción\n')
     archivo.write('Como esto terminamos')
     archivo.write('La letras son:\nr : read\na: append, anexamos informacion\nx: para crear archivos\nt: text\nb: archivos binarios\nw+:lee y escribe\nr+: escribe y lee\n')
