@@ -82,7 +82,7 @@
             <p>Abril: <progress value="45" min="0" max="100"></progress></p>
 
 
-        <footer> pie de pagina </footer>
+        
 
         <!--Maquetacion de imagenes-->
         <figure>
@@ -94,19 +94,53 @@
 
     </body>
 
+
+
+<!--CSS-->
 <!--STYLE/ para agregar el CSS o estilos de la pagina-->
 <!--Aspectos de la cajas-->
     <style>
         body{
             background: lightblue;
         }
+        header{
+            width: 1000px;
+            height: 200px;
+            background: rgba(248, 170, 170, 0.884);
+            margin: 20px;
+            border: 5px  rgb(164, 124, 44);
+
+        }
 
         #caja{ 
             width: 200px;
             height: 200px;
-            background: rgb(222, 126, 177);
+            background: rgb(212, 60, 141);
             }
-        
+        #logo{
+            width: 100px;
+            height: 50px;
+            background: greenyellow;
+            margin: 20px;
+            border: 5px solid white;
+            border-radius: 10px;
+            }
+            #logocircle{
+                width: 100px;
+                height: 100px;
+                background: greenyellow;
+                margin: 20px;
+                border: 5px solid white;
+                border-radius: 100px;
+                }
+                #logooval{
+                    width: 100px;
+                    height: 50px;
+                    background: greenyellow;
+                    margin: 20px;
+                    border: 5px solid white;
+                    border-radius: 150px;
+                    }
         .grupo{ 
             width: 200px;
             height: 200px;
@@ -114,22 +148,25 @@
             margin: 16px;
         }
 
-        header{
-            width: 1000px;
-            height: 200px;
-            background: rgb(255, 255, 255);
-            margin: 20px;
-            border: 5px solid orange;
-
+        #logo, #logocircle, #logooval {
+            float: left;
+            margin-right: 10px; /* Espacio entre los elementos */
         }
+        
+        
 
     </style>
 
+    <!--HTML-->
     <body>
         <div id="caja">Caja usando atributo id #caja en style</div> <!--div para generar cajas en la pagina-->
         <div class="grupo">CAJA usando atributo class .grupo en style</div>
-        <header> Propiedades de forma usando header{} en Style</header>
-
+        <header> Propiedades de forma usando header{} en Style
+            <div id="logo">Logotipo</div> <div id="logocircle">Logotipo</div> <div id="logooval">Logotipo</div>
+        </header>
+      
+       
+        <footer> by Carolina Mamani </footer> 
     </body>
 
 </html>
