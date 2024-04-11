@@ -22,11 +22,12 @@ print(archivo.readlines(1))
 print(archivo.readlines()[1])#accedemos al archivo como si fuera una lista separada por comas
 # con [] muestrra la oracion '''
 
-
+try:
 #Anexamos informacion, copiamos a otro
-archivo2 = open('copia.txt', 'w', encoding='utf8')
-archivo2.write(archivo.read()) #abrimos el archivo
-archivo.close() #cerramos el archivo
-archivo2.close()# cerramos el segundo archivo
+    archivo2 = open('copia.txt', 'w', encoding='utf8')
+    archivo2.write(archivo.read()) #abrimos el archivo
+    archivo.close() #cerramos el archivo
+    archivo2.close()# cerramos el segundo archivo
 
-print('Se ha terminado el proceso de leer y copiar archivos')
+finally:
+    print('Se ha terminado el proceso de leer y copiar archivos')
