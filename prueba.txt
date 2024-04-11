@@ -5,7 +5,8 @@ Como esto terminamosLa letras son:
 r : read
 a: append, anexamos informacion
 x: para crear archivos
-t: tex
+t: text
 b: archivos binarios
 w+:lee y escribe
 r+: escribe y lee
+Saludos a todos! owo 

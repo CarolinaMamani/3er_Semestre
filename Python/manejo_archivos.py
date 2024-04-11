@@ -8,9 +8,11 @@ try:
     archivo.write('Programamos con diferentes tipo de archivos, ahora en txt.\n Los acentos son importantes para las palabras\n')
     archivo.write('como por ejemplo acción\n')
     archivo.write('Como esto terminamos')
-    archivo.write('La letras son:\nr : read\na: append, anexamos informacion\nx: para crear archivos\nt: text\nb: archivos binarios\nw+:lee y escribe\nr+: escribe y lee')
+    archivo.write('La letras son:\nr : read\na: append, anexamos informacion\nx: para crear archivos\nt: text\nb: archivos binarios\nw+:lee y escribe\nr+: escribe y lee\n')
+    archivo.write('Saludos a todos! owo \n')
 except Exception as e:
     print(e)
 finally: #siempre se ejecuta
     archivo.close() #se cierra el archivo
 #archivo.write('todo quedo perfecto') : este es un error
+
