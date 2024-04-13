@@ -82,29 +82,30 @@ Clase 5:
 nueva base de datos: paso
 
             use paso
-            switchetd to db paso
+
             db.paso.insertMany([{"nombre":"Hugo","apellido":"Garcia"},{"nombre":"Lou","apellido":"Ola"},{"nombre":"July":"apellido":"Julio"}])
-            db.paso.getindexes()
-            db.paso.find{"nombre":"Lou"}
-            db.paso.find({"_id":objetID(""")})
+            db.paso.getIndexes()
+            db.paso.find({"nombre":"Lou"})
 
 creamos un index
-db.paso.createindex({"apellido":1}) //solo contendra apellidos
+db.paso.createIndex({"apellido":1}) //solo contendra apellidos
+
 //Indices unicos
+
+            use paso2
 
             db.paso2.insertMany([{"usuario":"LumY_8","contrasena":"12364lm"},{"usuario":"Koetl_049","contrasena":"9849djasdk6"},{"usuario":"Hyeu99","contrasena":"jdirutm84"}])
             db.paso2.find()
             db.paso2.getIndexes()
 
 creamos los index unicos
-db.paos2.createIndex({"correo":1},{unique:true})
+db.paso2.createIndex({"correo":1},{unique:true})
+
 //Indice en segundo plano
 
             use segundo
-            switched to db segundo
-            db.segundo.insertMany([{"auto":"Chevrolet","ano":2010,"fecha":newDate()},{"auto":"Sobaru","ano":2020,"fecha":newDate()},{"auto":"Toyota","ano":1998,"fecha":newDate()}])
+
+            db.segundo.insertMany([{"auto":"Chevrolet","ano":2010},{"auto":"Sobaru","ano":2020},{"auto":"Toyota","ano":1998}])
             db.segundo.find().pretty()
-            db.segundo.createIndex({"nombre":1},{"background":true})
-            db.segundo.getindexes()
-
-
+            db.segundo.createIndex({"nombre":1},{background:true})
+            db.segundo.getIndexes()
