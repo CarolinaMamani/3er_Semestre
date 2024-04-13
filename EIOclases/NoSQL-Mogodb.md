@@ -76,3 +76,35 @@ Clase 5:
     db.selection.find({"nombre":"jesi"},{"nombre":"fer"})
 
     db.primer_metodo.findOne({"nombre":"fer"})
+
+//CLASE6:
+//Indices en MongoDB
+nueva base de datos: paso
+
+            use paso
+            switchetd to db paso
+            db.paso.insertMany([{"nombre":"Hugo","apellido":"Garcia"},{"nombre":"Lou","apellido":"Ola"},{"nombre":"July":"apellido":"Julio"}])
+            db.paso.getindexes()
+            db.paso.find{"nombre":"Lou"}
+            db.paso.find({"_id":objetID(""")})
+
+creamos un index
+db.paso.createindex({"apellido":1}) //solo contendra apellidos
+//Indices unicos
+
+            db.paso2.insertMany([{"usuario":"LumY_8","contrasena":"12364lm"},{"usuario":"Koetl_049","contrasena":"9849djasdk6"},{"usuario":"Hyeu99","contrasena":"jdirutm84"}])
+            db.paso2.find()
+            db.paso2.getIndexes()
+
+creamos los index unicos
+db.paos2.createIndex({"correo":1},{unique:true})
+//Indice en segundo plano
+
+            use segundo
+            switched to db segundo
+            db.segundo.insertMany([{"auto":"Chevrolet","ano":2010,"fecha":newDate()},{"auto":"Sobaru","ano":2020,"fecha":newDate()},{"auto":"Toyota","ano":1998,"fecha":newDate()}])
+            db.segundo.find().pretty()
+            db.segundo.createIndex({"nombre":1},{"background":true})
+            db.segundo.getindexes()
+
+
