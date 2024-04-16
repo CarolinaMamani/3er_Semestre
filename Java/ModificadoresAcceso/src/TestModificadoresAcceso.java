@@ -5,5 +5,9 @@ public class TestModificadoresAcceso {
         // muestra lo que hay dentro del atributo
 
         clase1.metodoPublico();
+
+        Clase3 claseHija = new Clase3(); // cremoa un objeto de la clase 3
+        System.out.println("claseHija = " + claseHija);
+
     }
 }
