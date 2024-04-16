@@ -64,3 +64,20 @@ const sumarFuncionFlecha = (a,b) => a + b; //=> operador de flecha indica el res
 //no se utilizan las palabras reservadas: function, las {} y return
 resultado = sumarFuncionFlecha(3,7);//le pasamos los argumentos, asignamos el valor a una variable
 console.log(resultado);
+
+
+
+//Diferencias entre Argumentos y Parametros
+    //PARAMETROS: lista de variables q definimos en una funcion
+        //Cuando definimos una funcion dentro de los parentesis estan los paramentros de la funcion. Las variables son los parametros
+    //ARGUMENTOS: son los valores que pasmos cuando llamamos a una funcion
+        //Cuando llamamos a la funcion, dentro de ( ) le ponemos los argumentos
+//------FUNCION DE TIPO EXPRESION
+let sumar = function(a = 4,b = 8){ //valores de default
+    console.log(arguments[0]);//muestra el parametro de a =
+    console.log(arguments[1]);//muestra el parametro de b =
+    return a + b + arguments[2];
+}
+resultado = sumar(3,2,9); //asigna valores a los paramentros desde los argumentos
+console.log(resultado); 
+//no es requerido que coincidan los nros de argumentos con el nro de parametros
