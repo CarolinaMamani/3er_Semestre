@@ -81,3 +81,17 @@ let sumar = function(a = 4,b = 8){ //valores de default
 resultado = sumar(3,2,9); //asigna valores a los paramentros desde los argumentos
 console.log(resultado); 
 //no es requerido que coincidan los nros de argumentos con el nro de parametros
+
+
+//Hoisting: primero llamamos la funcion antes de ser creada/definida/declarada
+//vamos a sumar todos los argumentos
+let respuesta = sumarTodo(5,4,13,10,9);
+console.log(respuesta);
+
+function sumarTodo(){
+    let suma = 0;
+    for (let i = 0; i < arguments.length; i++){
+        suma += arguments[i]; //arguments es para arreglos
+    }
+    return suma;
+}
