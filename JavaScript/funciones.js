@@ -57,3 +57,10 @@ miFuncionDos(5, 7,8,5); //le pasamos 4 argumentos
 
 var miFuncionTexto = miFuncionDos.toString(); //convierte la funcion a texto
 console.log(miFuncionTexto);
+
+
+//-------FUNCIONES FLECHA
+const sumarFuncionFlecha = (a,b) => a + b; //=> operador de flecha indica el resultado que regresa
+//no se utilizan las palabras reservadas: function, las {} y return
+resultado = sumarFuncionFlecha(3,7);//le pasamos los argumentos, asignamos el valor a una variable
+console.log(resultado);
