@@ -23,10 +23,22 @@ let resultado = miFuncion(6, 7);
 console.log(resultado) //si quitamos el return del a funcion nos saldra undefined
 
 
-//FUNCIONES DE TIPO EXPRESION o FUNCION ANONIMA
+
+//------FUNCIONES DE TIPO EXPRESION o FUNCION ANONIMA
 let x = function(a,b){ return a + b}; //necesita cierre con ; al final
 resultado = x(5,6);//variable x representa a esta funcion anonima, dentro de () van los argumentos
 console.log(resultado);
     // x = variable de resultado
+
+
+//-------FUNCIONES DE TIPO SELF / INVOKING (se llaman a si mismas)
+(function(a,b){
+    console.log('ejectando la funcion: '+(a+b));
+})(9,6); //funcion anonima que se llama a si misma
+//No se puede reutilizar porque no tiene variables ni nombre
+//solo se llama asi misma una sola vez
+
+
+
 
 
