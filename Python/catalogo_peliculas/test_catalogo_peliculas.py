@@ -1,5 +1,5 @@
 
-from Python.catalogo_peliculas.dominio.Pelicula import Pelicula
+from dominio.Pelicula import Pelicula
 from servicio.catalogo_peliculas import CatalogoPeliculas as cp # vamos a usar esa clase con el nombbre cp
 
 opcion = None

@@ -13,7 +13,7 @@ class CatalogoPeliculas:
     #metodo para listas las peliculas
     @classmethod
     def listar_peliculas(cls):
-        with open(cls.ruta_archivo, 'r',encoding="utf8") as archivo:
+        with open(cls.ruta_archivo, 'r', encoding="utf8") as archivo:
             print(f'Catalogo de peliculas'.center(50,'-'))
             print(archivo.read())
             
