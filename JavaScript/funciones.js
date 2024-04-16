@@ -39,6 +39,21 @@ console.log(resultado);
 //solo se llama asi misma una sola vez
 
 
+// Una funcion es un tipo de dato
+console.log(typeof miFuncion);
+
+// tambien puedes ser  un objeto, que tienen propiedades, metodos asiciados a cada uno de los ojetos
+//ej: quermos saber cuantos argumentos se han definido en la funcion
+//arguments
+function miFuncionDos(a,b){
+    console.log(arguments.length); //debemos estar dentro de la funcion para realizar estas preguntas
+}
+
+miFuncionDos(5, 7,8,5); //le pasamos 4 argumentos
 
 
 
+// metodo/funcion toString, lo llamamos con el operador de .
+
+var miFuncionTexto = miFuncionDos.toString(); //convierte la funcion a texto
+console.log(miFuncionTexto);
