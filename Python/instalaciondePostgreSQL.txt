@@ -1,0 +1,20 @@
+Apuntes de como usar Query en ProstgreSQL
+Vamos a usarlo con python.
+
+---
+F5 para enviar el input
+
+--Para mostrar registros en la base de datos
+    SELECT * FROM persona WHERE id_persona in (1,2,3)
+
+--Para insertar informacion o registro
+    INSERT INTO persona(nombre,apellido,email)VALUES('Susana','Lola','lola@gmail.com')
+
+--Consulta para ver toda la informacion de la tabla
+    SELECT * FROM persona
+
+--Para modificar un valor
+    UPDATE persona SET nombre = 'Invane', apellido = 'Matriz', email = 'inove@gmail.com' WHERE id_persona = 3
+
+--Para eliminar 1 o mas registros
+    DELETE FROM persona WHERE id_persona = 3
