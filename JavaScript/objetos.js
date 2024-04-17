@@ -21,3 +21,10 @@ console.log(Persona);
 
 //imprimimos el metodo
 console.log(Persona.nombreCompleto());
+
+//Segunda forma de crear un objeto
+let persona2 = new Object(); //debe crear un nuevo objeto en memoria
+persona2.nombre = 'Juan'; //atravez del punto agregamos propiedades al objeto
+persona2.direccion = 'Salida 24';
+persona2.telefono = '2456754';
+console.log(persona2.telefono);
