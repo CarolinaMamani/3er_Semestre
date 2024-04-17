@@ -96,10 +96,9 @@ function sumarTodo(){
     return suma;
 }
 
+
 //Paso por valor: cuando usamos tipos que no son objetos: numerico, booleano, etc. Se aplica cuando trabajamos con funciones
 //se pasa una copia de esta variable al metodo que se va a llamar
-    
-//Paso por referencias
 //Tipos primitivos
 let k = 10;
 //Paso por valor:
@@ -108,3 +107,27 @@ function cambiarValor(a){//a recibe valor 10
 }
 cambiarValor(k); //k nunca se modfico, nada afecto
 console.log(k);
+
+
+
+//Paso por referencia: vamos a tener que crear un objeto porque a este se le puede asociar propiedades y metodos
+const persona = { //constante
+    //referencia de un objeto para crear un objeto
+    nombre: 'Juan', //objeto se usan :, y los atributos con ,
+    apellido: 'Lepez'
+}
+console.log(persona);
+//Paso por referencia
+function cambiarValorObjeto(p1){ //la funcion va a pasar un valor hexadecimal que va a apuntar a persona (objeto con atributos y cracteristicas)
+    p1.nombre = 'Ignacio'; //con la variable p1. accedemos a los atributos del objeto persona
+    p1.apellido = 'Perez';
+}
+//p1 al finalizar se va a destruir, pero las modificaciones va a afectar permanentemente al objeto persona
+cambiarValorObjeto(persona);
+console.log(persona);
+
+
+
+
+
+
