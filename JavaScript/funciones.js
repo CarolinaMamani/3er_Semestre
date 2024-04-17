@@ -95,3 +95,16 @@ function sumarTodo(){
     }
     return suma;
 }
+
+//Paso por valor: cuando usamos tipos que no son objetos: numerico, booleano, etc. Se aplica cuando trabajamos con funciones
+//se pasa una copia de esta variable al metodo que se va a llamar
+    
+//Paso por referencias
+//Tipos primitivos
+let k = 10;
+//Paso por valor:
+function cambiarValor(a){//a recibe valor 10
+    a =20; //nueva variable, recibe valor 20, luego se destruyo
+}
+cambiarValor(k); //k nunca se modfico, nada afecto
+console.log(k);
