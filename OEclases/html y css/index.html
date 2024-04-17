@@ -21,7 +21,16 @@
         
 
 
-        <header>--ENCABEZADO--</header>  <!--Encabezado-->
+        <header>--ENCABEZADO--
+             <!--DIV division en el encabezado-->
+            <div id="logotipo">logotipo</div>
+        </header>  <!--Encabezado-->
+        <aside>
+                <div class="noticias">noticia1</div>
+                <div class="noticias">noticia2</div>
+                <div class="noticias">noticia3</div>
+        </aside>
+
         <nav>Barra de Navegacion</nav> <!--Barra de navegacion-->
         <section></section> <!--Seccion del sitio-->
         <aside></aside> <!--Columnas-->
@@ -164,8 +173,38 @@
         <header> Propiedades de forma usando header{} en Style
             <div id="logo">Logotipo</div> <div id="logocircle">Logotipo</div> <div id="logooval">Logotipo</div>
         </header>
-      
+
+      <!--Insertando audio-->
+        <audio autoplay controls loop preload="auto"></audio>
+            <source src="audio/audio.mp4" type="audio/mp4">
+            <source src="audio/audio.mp3" type="audio/mp3">
+            <source src="audio/audio.ogg" type="audio/ogg">
+
+        <!--Insertando video-->
+        <video autoplay controls loop width="500" height="200"></video>
+            <source src="video/video.mp4" type="video/mp4">
+            <source src="video/video.ogv" type="video/ogv">
+            <source src="video/video.webm" type="video/webm">
+
+        <!--Iframe para insertar video etc en linea-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/erYO3TOX5jU?si=C9EgbQOBGNrWM1vh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+       <!--Formulario-->
+        <form>
+            <label for="text">Ingresar texto</label>
+            <input id="text" type="text" placeholder="Ingresar texto" value=""> 
+            <br>
+            <label for="correo">Ingresar correo</label>
+            <input id="correo" type="email" placeholder="Ingresar correo" value="">
+            <br>
+            <label for="pass">Ingresar contrasena</label>
+            <input for="pass" type="password" placeholder="Ingresar contrasena" value="">
+            <br>
+            <input type="number" value="" min="0" max="3">
+        </form>
        
+    
+
         <footer> by Carolina Mamani </footer> 
     </body>
 
