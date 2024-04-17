@@ -1,3 +1,8 @@
+package test;
+
+import paquete1.Clase1;
+import paquete2.Clase3;
+
 public class TestModificadoresAcceso {
     public static void main(String[] args) {
         Clase1 clase1 = new Clase1(); // llamamos al constructor

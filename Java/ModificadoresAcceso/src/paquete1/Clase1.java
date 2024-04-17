@@ -1,3 +1,5 @@
+package paquete1;
+
 public class Clase1 {
     // public static void main(String[] args) { // modificador de acceso PUBLIC
     // puclic significa que la clase se puede utilizar en cualquier parte de nuestro

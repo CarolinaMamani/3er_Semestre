@@ -1,4 +1,6 @@
+package paquete1;
 
+//DEFAULT
 class Clase2 extends Clase1 { // ausencia del modificador de acceso: DEFAULT / PAKAGE
     // solo puede ser usada dentro del mismo paquete
     String atributoDefault = "Valor del atributo default";

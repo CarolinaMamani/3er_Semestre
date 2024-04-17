@@ -1,4 +1,8 @@
+package paquete2;
 //Clase hija que extiende la clase 1 (padre)
+
+import paquete1.Clase1;
+
 public class Clase3 extends Clase1 {
     public Clase3() {
         super("protected");
