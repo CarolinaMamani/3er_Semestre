@@ -1,4 +1,4 @@
-import psycopg2 # esot es para poder conectarnos a postrgre
+import psycopg2 # esto es para poder conectarnos a postrgre
 
 conexion = psycopg2.connect(
     user = 'postgres',
@@ -10,7 +10,13 @@ conexion = psycopg2.connect(
 
 #cursor para permitir ejecutar sentencias en sql
 cursor = conexion.cursor()
-sentencia = 'SELEC * FROM persona'
+sentencia = 'SELECT * FROM persona'
 cursor.execute(sentencia) #ejecutamos la cadena sentencia
 registros = cursor.fetchall() #metodo fetchall recupera todos los registros de la sentencia que seran una lista
+
+print(registros) #recibimos una lista, pero internamente tenemos tuplas
+#conexion exitosa
+#cerramos la conexion
+cursor.close()
+conexion.close()
 
