@@ -39,3 +39,10 @@ for(propiedad in Persona){
     console.log(propiedad);
     console.log(Persona[propiedad]);
 }
+
+//Agregar y eliminar propiedades de un objeto
+//Para agregar propiedad apellida
+Persona.apellida = 'Bernadet'; //cambiamos dinamicamente el valor del objeto
+//Para eliminar
+delete Persona.apellida
+console.log(Persona);
