@@ -1,3 +1,4 @@
+import domain.Persona;
 
 public class TestBloqueInicializacion {
     public static void main(String[] args) {

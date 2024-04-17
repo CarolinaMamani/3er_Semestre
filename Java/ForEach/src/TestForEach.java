@@ -1,3 +1,5 @@
+import domain.Persona;
+
 public class TestForEach {
     public static void main(String[] args) {
         // for each es un ciclo for, mejorado

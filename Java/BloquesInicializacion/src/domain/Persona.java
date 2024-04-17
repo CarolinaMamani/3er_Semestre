@@ -1,3 +1,4 @@
+package domain;
 
 public class Persona {
     private final int idPersona;
