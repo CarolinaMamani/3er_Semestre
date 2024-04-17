@@ -11,3 +11,6 @@ let Persona = { //objeto memomoria con =
     edad: 30
 } 
 console.log(Persona.nombre);
+console.log(Persona.apellido);
+console.log(Persona.edad);
+console.log(Persona);
