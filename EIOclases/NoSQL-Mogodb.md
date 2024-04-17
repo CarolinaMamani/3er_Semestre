@@ -26,6 +26,8 @@ Crear una base de datos en la Shell de Mongo
 
     db.insertar.find()
 
+---
+
 Clase 4:
 // Creamos base de datos con insertone e insertmany
 
@@ -35,6 +37,8 @@ Clase 4:
 
 //Creamos base de datos desde Studio3T
 ver las imagenes 4.1 y 4.2
+
+---
 
 Clase 5:
 //Aprendemos algunos comandos
@@ -77,7 +81,9 @@ Clase 5:
 
     db.primer_metodo.findOne({"nombre":"fer"})
 
-//CLASE6:
+---
+
+CLASE6:
 //Indices en MongoDB
 nueva base de datos: paso
 
@@ -109,3 +115,18 @@ db.paso2.createIndex({"correo":1},{unique:true})
             db.segundo.find().pretty()
             db.segundo.createIndex({"nombre":1},{background:true})
             db.segundo.getIndexes()
+
+---
+
+CLASE 7
+
+Operadores logicos en MongoDB:
+
+    $gte mayor o = que (>=)       db.logico_1.find({cantidad:{$gte:20}})
+    $gt mayor que (>)             db.logico_1.find({cantidad:{$gt:20}})
+
+    $lte menor o = que (<=)       db.logico_1.find({cantidad:{$lte:20}})
+    $lt menor que (<)             db.logico_1.find({cantidad:{$lt:20}})
+
+        $gt + $lt (><)                db.logico_1.find({cantidad:{$gt:20, $lt:40}})
+        $gte + $lte (>=<=)            db.logico_1.find({cantidad:{$gte:2000, $lte: 6000}})
