@@ -20,7 +20,7 @@ Crear una base de datos en la Shell de Mongo
 
     use.primeraclase
     cls (limpiar pantalla)
-    db.insertar.insert({"nombre":"Carolina","edad":20})
+    db.primeraclase.insert({"nombre":"Carolina","edad":20})
 
 //consulta para ver la base de datos creada
 
@@ -130,3 +130,15 @@ Operadores logicos en MongoDB:
 
         $gt + $lt (><)                db.logico_1.find({cantidad:{$gt:20, $lt:40}})
         $gte + $lte (>=<=)            db.logico_1.find({cantidad:{$gte:2000, $lte: 6000}})
+
+---
+
+CLASE 8
+
+Ejercicio 1:
+Ejercicio 2:
+Ejercicio 3:
+Ejercicio 4:
+Ejercicio 5:
+
+Ver las capturas de las imagenes Clase 8
