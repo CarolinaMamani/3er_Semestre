@@ -28,3 +28,14 @@ persona2.nombre = 'Juan'; //atravez del punto agregamos propiedades al objeto
 persona2.direccion = 'Salida 24';
 persona2.telefono = '2456754';
 console.log(persona2.telefono);
+
+
+//Formas de acceder a pripiedades de los objetos 
+console.log(Persona['apellido']); //accedemos como si fuera un arreglo
+
+//for in, y accedemos al objeto como si fuera un arreglo
+for(propiedad in Persona){
+    //dos formas
+    console.log(propiedad);
+    console.log(Persona[propiedad]);
+}
