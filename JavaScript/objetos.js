@@ -8,9 +8,16 @@ let Persona = { //objeto memomoria con =
     nombre: 'Carlos',
     apellido: 'Gil',
     email: 'gil@gmail.com',
-    edad: 30
+    edad: 30,
+    //Agregamos metodos o funciones a los objetos 
+    nombreCompleto: function(){
+        return this.nombre+' '+this.apellido;
+    }
 } 
 console.log(Persona.nombre);
 console.log(Persona.apellido);
 console.log(Persona.edad);
 console.log(Persona);
+
+//imprimimos el metodo
+console.log(Persona.nombreCompleto());
