@@ -18,3 +18,11 @@ F5 para enviar el input
 
 --Para eliminar 1 o mas registros
     DELETE FROM persona WHERE id_persona = 3
+
+
+ Intalacion del modulo ProstgreSQL en Python   
+ Trabajamos con entornos virtuales para poder instalar modulos especificos
+    pip nos permite descargar e instalar librerias
+
+        terminal > pip install psycopg2 //ProstgreSQL
+        terminal > pip install mysql-connector //mysql
