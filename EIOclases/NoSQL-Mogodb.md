@@ -142,3 +142,13 @@ Ejercicio 4:
 Ejercicio 5:
 
 Ver las capturas de las imagenes Clase 8
+
+Para crear colecciones:
+use basededatos
+db.createCollection("nombre de coleccion")
+
+Para ingresar datos en las colecciones:
+db.getCollection("nombre de coleccion").insertOne({"nombre":"Kiue"})
+
+Para agregar fechas
+db.coleccion...({"fecha":new Date(ano,mes,dia)})
