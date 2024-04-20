@@ -18,4 +18,13 @@ public class Gerente extends Empleado {
         // agregamos el atributo de departamento
         return super.obtenerDetaller() + ", Departamento: " + this.departamento;
     }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+
 }

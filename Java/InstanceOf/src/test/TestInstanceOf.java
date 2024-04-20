@@ -19,6 +19,8 @@ public class TestInstanceOf {
                                                            // e hija
         if (empleado instanceof Gerente) {
             System.out.println("Es de tipo Gerente");
+            Gerente gerente = (Gerente) empleado; // covertimos a un tipo gerente
+            gerente.getDepartamento();
         } else if (empleado instanceof Empleado) {
             System.out.println("Es de tipo Empleado");
         } else if (empleado instanceof Object) {
