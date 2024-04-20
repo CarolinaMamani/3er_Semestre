@@ -18,4 +18,9 @@ public class Gerente extends Empleado {
         // agregamos el atributo de departamento
         return super.obtenerDetaller() + ", Departamento: " + this.departamento;
     }
+
+    public String getDepartamento() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getDepartamento'");
+    }
 }

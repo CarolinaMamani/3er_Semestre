@@ -8,8 +8,9 @@ public class TestInstanceOf {
         // variables de la clase padre
         Empleado empleado1 = new Empleado("Juan", 100000);
         determinarTipo(empleado1);
+
         empleado1 = new Gerente("Jose", 5000, "Sistemas");
-        determinarTipo(empleado1);
+        // determinarTipo(empleado1);
     }
 
     // InstanteOf, nos permite preguntar de que tipo es la refencia a la cual esta
@@ -20,9 +21,13 @@ public class TestInstanceOf {
         if (empleado instanceof Gerente) {
             System.out.println("Es de tipo Gerente");
             Gerente gerente = (Gerente) empleado; // covertimos a un tipo gerente
-            gerente.getDepartamento();
+            // ((Gerente) empleado).getDepartamento();
+            System.out.println("genrente = " + gerente.getDepartamento());
         } else if (empleado instanceof Empleado) {
             System.out.println("Es de tipo Empleado");
+            // Gerente gerente = (Gerente) empleado; // covertimos a un tipo gerente
+            // System.out.println("genrente = " + gerente.getDepartamento());
+            // no muestra error, pero esta mal. Solo se ve cuando ejecutamos
         } else if (empleado instanceof Object) {
             System.out.println("Es de tipo Object");
         }
