@@ -9,7 +9,18 @@ let Persona = { //objeto memomoria con =
     nombre: 'Carlos',
     apellido: 'Gil',
     email: 'gil@gmail.com',
-    edad: 30,
+    edad: 28,
+    idioma: 'ES',
+    get lang(){
+        return this.idioma.toUpperCase(); //convierte las minusculas a mayusculas
+    },
+//SET: set que en inglés significa establecer o modificar. El método set se utilizará 
+//para modificar los valores de los objetos. 
+//Se combinará el uso del set con el uso del get.
+    set lang(lang){
+        this.idioma = lang.toUpperCase();
+    },
+
     //Agregamos metodos o funciones a los objetos 
     nombreCompleto: function(){
         return this.nombre+' '+this.apellido;
@@ -21,7 +32,7 @@ let Persona = { //objeto memomoria con =
      get nombreEdad(){
         return 'El nombre es : '+this.nombre +', Edad: '+this.edad;
      }
-
+     
 } 
 console.log(Persona.nombre);
 console.log(Persona.apellido);
@@ -83,3 +94,9 @@ console.log(personaString);
 //para el metodo get
 console.log('Comenzamos a utilizar el metodo get: ')
 console.log(Persona.nombreEdad);
+
+//llamamos al set
+console.log('Comenzamos con el metodo get  y set para idiomas');
+Persona.lang = 'en'; //cambiamos el idioma
+console.log(Persona.lang);
+
