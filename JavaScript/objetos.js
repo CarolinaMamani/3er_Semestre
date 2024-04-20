@@ -48,3 +48,25 @@ Persona.apellida = 'Bernadet'; //cambiamos dinamicamente el valor del objeto
 delete Persona.apellida
 console.log(Persona);
 
+
+//Distintas formas de imprimir un objeto
+//Num 1: es la mas sencilla, concatenar cada valor de cada propiedad
+console.log('Distintas formas imprir un objeto: forma1');
+console.log(Persona.nombre+', '+Persona.apellido);
+
+//Num 2: a tavez del ciclo for in
+console.log('Distintas formas imprir un objeto: forma2');
+for(nombrePropiedad in Persona){
+    console.log(Persona[nombrePropiedad]);
+}
+
+//Num 3 : la funcion Object.values() es un metodo que devuelve el objeto como un arreglo
+console.log('Distintas formas imprir un objeto: forma3');
+let personaArray = Object.values(Persona);
+console.log(personaArray);
+
+//Num 4: Utilizaremos el metodo JSON.stringify
+//nos imprimi una cadena como la de insertar datos en mongodb
+console.log('Distintas formas imprir un objeto: forma4');
+let personaString = JSON.stringify(Persona);
+console.log(personaString);
