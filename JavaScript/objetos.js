@@ -100,3 +100,26 @@ console.log('Comenzamos con el metodo get  y set para idiomas');
 Persona.lang = 'en'; //cambiamos el idioma
 console.log(Persona.lang);
 
+
+//CONSTRUCTOR
+//el constructor es una función especial que se trabajará con objetos en JavaScript. 
+//Para llamar una funciónconstructor se utilizará la palabra reservada new 
+//lo que reservará espacio en memoria del objeto que se creará. 
+//Se recomienda que el nombre de la función empiece con mayúscula.
+
+//es sera nuestro constructor
+function Persona3(nombre, apellido, email){ //metodo para la creacion de objetos
+    this.nombre = nombre;
+    this.apellida = apellido;
+    this.email = email;
+
+}
+
+let padre = new Persona3('Leo','Ortiur',"gjhhau@gmail.com");
+padre.nombre = 'Loid'; //podemos modificar
+console.log(padre);
+
+let madre = new Persona3('Laura','Contrera','contrea@gmail.com');
+console.log(madre);
+
+//new nos reserva un espacio de memoria para cada objeto.
