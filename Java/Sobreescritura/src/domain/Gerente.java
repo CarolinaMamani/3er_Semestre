@@ -9,7 +9,8 @@ public class Gerente extends Empleado {
         this.departamento = departamento;
     }
 
-    // Sobre escribimos el metodo
+    // Sobre escribimos el metodo de la clase padre
+
     @Override // @ es un anotacion, modifica el comportamiento del metodo que esta definido
     // le indica que el metodo obtenerdetaller, esta siendo escrito desde la clase
     // padre
