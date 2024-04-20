@@ -13,7 +13,15 @@ let Persona = { //objeto memomoria con =
     //Agregamos metodos o funciones a los objetos 
     nombreCompleto: function(){
         return this.nombre+' '+this.apellido;
-    }
+    },
+//METODO GET:se utiliza para hacer solicitudes HTTP de tipo GET a un servidor para obtener recursos o datos. 
+//se utiliza comúnmente en combinación con la API Fetch de JavaScript para hacer 
+//solicitudes HTTP a un servidor y obtener datos en formato JSON, texto, HTML u otros formatos. 
+//se utiliza comúnmente para obtener recursos o datos del servidor
+     get nombreEdad(){
+        return 'El nombre es : '+this.nombre +', Edad: '+this.edad;
+     }
+
 } 
 console.log(Persona.nombre);
 console.log(Persona.apellido);
@@ -70,3 +78,8 @@ console.log(personaArray);
 console.log('Distintas formas imprir un objeto: forma4');
 let personaString = JSON.stringify(Persona);
 console.log(personaString);
+
+
+//para el metodo get
+console.log('Comenzamos a utilizar el metodo get: ')
+console.log(Persona.nombreEdad);
