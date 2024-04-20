@@ -9,7 +9,7 @@ public class TestInstanceOf {
         Empleado empleado1 = new Empleado("Juan", 100000);
         determinarTipo(empleado1);
         empleado1 = new Gerente("Jose", 5000, "Sistemas");
-
+        determinarTipo(empleado1);
     }
 
     // InstanteOf, nos permite preguntar de que tipo es la refencia a la cual esta
