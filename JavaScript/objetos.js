@@ -129,4 +129,29 @@ console.log(madre.nombreCompleto());
 //new nos reserva un espacio de memoria para cada objeto.
 
 
+//Distintas formas de crear distintos tipos de objetos:
+//caso objetos
+let miObjeto = new Object();
+let miObjeto2 = {};// esta opcion es breve y recomendada
+
+//caso Strings
+let miCadena1 = new String('Hola');
+let miCadena2 = 'Hola';// es la sintaxis simplificada y recomendada
+
+//caso con numeros
+let miNumero1 = new Number(1);//es formal no recomendada
+let miNumero2 = 1;//Sintaxis recomendad
+
+//caso booleanos 
+let miBoolean1 = new Boolean(false);
+let miBoolean2 = false; //sintaxis recomendado
+
+//caso Arreglos
+let miArreglo1 = new Array;
+let miArreglo2 = []; //reocmendado
+
+//caso Funciones
+let miFuncion1 = new function(){}; //todo despues de new es considerados objeto
+let miFuncion2 = function(){};//notacion simplificada y recomendada
+
 
