@@ -132,33 +132,50 @@ console.log(madre.nombreCompleto());
 
 
 //Distintas formas de crear distintos tipos de objetos:
-//caso objetos
-let miObjeto = new Object();
-let miObjeto2 = {};// esta opcion es breve y recomendada
+        //caso objetos
+        let miObjeto = new Object();
+        let miObjeto2 = {};// esta opcion es breve y recomendada
 
-//caso Strings
-let miCadena1 = new String('Hola');
-let miCadena2 = 'Hola';// es la sintaxis simplificada y recomendada
+        //caso Strings
+        let miCadena1 = new String('Hola');
+        let miCadena2 = 'Hola';// es la sintaxis simplificada y recomendada
 
-//caso con numeros
-let miNumero1 = new Number(1);//es formal no recomendada
-let miNumero2 = 1;//Sintaxis recomendad
+        //caso con numeros
+        let miNumero1 = new Number(1);//es formal no recomendada
+        let miNumero2 = 1;//Sintaxis recomendad
 
-//caso booleanos 
-let miBoolean1 = new Boolean(false);
-let miBoolean2 = false; //sintaxis recomendado
+        //caso booleanos 
+        let miBoolean1 = new Boolean(false);
+        let miBoolean2 = false; //sintaxis recomendado
 
-//caso Arreglos
-let miArreglo1 = new Array;
-let miArreglo2 = []; //reocmendado
+        //caso Arreglos
+        let miArreglo1 = new Array;
+        let miArreglo2 = []; //reocmendado
 
-//caso Funciones
-let miFuncion1 = new function(){}; //todo despues de new es considerados objeto
-let miFuncion2 = function(){};//notacion simplificada y recomendada
+        //caso Funciones
+        let miFuncion1 = new function(){}; //todo despues de new es considerados objeto
+        let miFuncion2 = function(){};//notacion simplificada y recomendada
 
-//USO DE PROTOTYPE
-Persona3.prototype.telefono = '26478112562'
-console.log(padre);
-console.log(madre.telefono);
-madre.telefono = '4557965'
-console.log(madre.telefono);
+//uso de PROTOTYPE
+    Persona3.prototype.telefono = '26478112562'
+    console.log(padre);
+    console.log(madre.telefono);
+    madre.telefono = '4557965'
+    console.log(madre.telefono);
+
+//uso de CALL
+let persona4 = {
+    nombre: 'Juan',
+    apellido:'Perez',
+    nombreCompleto2: function(titulo, telefono){
+        return titulo+': '+this.nombre+' '+this.apellido+' '+telefono;
+    }
+}
+
+let persona5 ={
+    nombre: 'Carlos',
+    apellido: 'Melon'
+}
+
+console.log(persona4.nombreCompleto2('Lic.','254788852'));
+console.log(persona4.nombreCompleto2.call(persona5, 'Ing.','145887526'));
