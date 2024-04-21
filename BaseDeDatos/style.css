@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #5f5ae9;
+}
+
+aside#der {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    width: 300px;
+    background-color: #ffffff; /* Color de fondo violeta */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+aside#der h1 {
+    text-align: center;
+    color: #333;
+    
+}
+aside#der input{
+    padding: 10px;
+    margin: 5px;
+    width: 270px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    background: linear-gradient(to right, #8a81f9, #bc9cff); /* Degradado violeta */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(to right, #6c63de, #9d88ff); /* Degradado violeta más oscuro en hover */
+}
+
+a.botones :active{
+    background:black;
+}
+
+/* Estilos para los enlaces */
+aside#der a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    margin-top: 10px;
+}
+
+aside#der a:hover {
+    color: #6c63de; /* Cambia el color del texto en hover */
+}
+
+/* Estilos para el botón de chat */
+#chatBtn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #8a81f9, #bc9cff); /* Degradado violeta */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#chatBtn:hover {
+    background: linear-gradient(to right, #6c63de, #9d88ff); /* Degradado violeta más oscuro en hover */
+}
