@@ -6,12 +6,10 @@ try:
     with conexion:
         with conexion.cursor() as cursor: 
             cursor = conexion.cursor()
-            sentencia = 'SELECT * FROM persona WHERE id_persona IN (1,2,3)'
-            
-            #id_persona = input('Digite un numero para el id_persona: ')
-        
-            cursor.execute(sentencia)
-          
+            sentencia = 'SELECT * FROM persona WHERE id_persona IN %s'
+            entrada = input('Digite los id_persona a buscar(separados por coma): ')
+            llaves_primarias = (tuple(entrada.split(', ')),)#tupla de tuplas
+            cursor.execute(sentencia, llaves_primarias)
             registros = cursor.fetchall() 
             for registro in registros:
                 print(registro)
