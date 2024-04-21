@@ -62,9 +62,9 @@ for(propiedad in Persona){
 console.log('cambiamos y eliminamos un error')
 //Agregar y eliminar propiedades de un objeto
 //Para agregar propiedad apellida
-Persona.apellida = 'Bernadet'; //cambiamos dinamicamente el valor del objeto
+Persona.apellido = 'Bernadet'; //cambiamos dinamicamente el valor del objeto
 //Para eliminar
-delete Persona.apellida
+delete Persona.apellido
 console.log(Persona);
 
 
@@ -110,16 +110,23 @@ console.log(Persona.lang);
 //es sera nuestro constructor
 function Persona3(nombre, apellido, email){ //metodo para la creacion de objetos
     this.nombre = nombre;
-    this.apellida = apellido;
+    this.apellido = apellido;
     this.email = email;
-
+    this.nombreCompleto = function(){ //cremos un metodo dentro del metodo constructor 
+        return this.nombre+' '+this.apellido;
+    }
 }
 
 let padre = new Persona3('Leo','Ortiur',"gjhhau@gmail.com");
 padre.nombre = 'Loid'; //podemos modificar
 console.log(padre);
 
+console.log(padre.nombreCompleto());//utilizamos la funcion
+
 let madre = new Persona3('Laura','Contrera','contrea@gmail.com');
 console.log(madre);
-
+console.log(madre.nombreCompleto());
 //new nos reserva un espacio de memoria para cada objeto.
+
+
+
