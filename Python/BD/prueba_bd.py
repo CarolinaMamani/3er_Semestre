@@ -7,9 +7,13 @@ try:
         with conexion.cursor() as cursor: # Este uso de with cierra el recurso del cursor automaticamente
         #cursor para permitir ejecutar sentencias en sql
             cursor = conexion.cursor()
-            sentencia = 'SELECT * FROM persona'
-            cursor.execute(sentencia) #ejecutamos la cadena sentencia
-            registros = cursor.fetchall() #metodo fetchall recupera todos los registros de la sentencia que seran una lista
+            sentencia = 'SELECT * FROM persona WHERE id_persona = %s'
+            #%s es un placeholder
+            id_persona = input('Digite un numero para el id_persona: ')
+            #pasamos una tupla (,) al execute
+            cursor.execute(sentencia,(id_persona,)) #ejecutamos la cadena sentencia
+           #fetchone va a mostrar solo uno
+            registros = cursor.fetchone() #metodo fetchall recupera todos los registros de la sentencia que seran una lista
             print(registros) #recibimos una lista, pero internamente tenemos tuplas
 #conexion exitosa
 except Exception as e:
