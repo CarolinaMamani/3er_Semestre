@@ -1,1 +1,33 @@
 22/04 Mal dia, aun tengo que ver la clase 2 de BD
+24/04 
+Clase 2:
+    Sitio Web para subir pagina web gratis:
+        (hosting gratuito)
+        co.000webhost.com
+    Sito para descargar plantillas para sitios web  
+        templemonster.com
+
+ -------------  OOP  ----------------------
+
+---- Super clase = Clase padre
+        Tienen atributos(caracteristicas) y metodos(comportamientos)
+        que heredan a las clases hijas o sub clases
+        Ej: Animal
+
+---- SubClase = Clase hija
+        Tienen todo de la case padre, pero pueden agregar o modificar
+        sus comportamientos (metodos) y atributos (caracteristicas)
+        Ej: Gato 
+
+Exsisten las jerarquias
+
+---- Los pilares de OOP
+    1- Abstraccion: los objetos creados copian atributos y comportamiento de objetos reales
+                    Ej: una clase avion puede existir en un simulador de vuelo (info relacionada con la navegacion) 
+                    Y tambien podria existir en un app de reserva de vuelo (mapa de asientos disponibles)
+    2- Polimorfismo: 
+    3- Encapsulacion: capacidad que tiene un objeto de esconder partes de su estado y comportamiento de otros objetos
+                    Los pone en privado, y son accesibles solo desde dentro de los metodos de su propia clase
+    4- Herencia
+
+
