@@ -14,7 +14,8 @@ public class TestConversionObjetos {
         // empleado.getTipoEscritura(); //no podemos acceder al metodo get de la clase
         // escritor. Este metodo no esta definido en la clase empleado
 
-        // Downscasting: al objeto padre Empleado lo casteamos hacia la clase hija
+        // ------------ Downscasting: al objeto padre Empleado lo casteamos hacia la
+        // clase hija
         // Escritor
 
         // ((Escritor)empleado).getTipoEscritura(); //tenemos 2 opciones: esta es una
@@ -24,13 +25,12 @@ public class TestConversionObjetos {
         // esta sixtasis convierte a un tipo Padre a un tipo Hijo
         // no se hace de manera automatica
 
-        Escritor escritor = (Escritor) empleado; // esta esl a segunda opcion
-
-        escritor.getTipoEscritura();
-
-        // Upcasting:
-        // se hace de manera automatica
+        // ----------- Upcasting: convertimos un tipo de la clase Hija hacia un tipo de
+        // la clase
+        // Padre
+        // se hace de manera automatica, no es necesaria una conversion explicita
         Empleado empleado2 = escritor;
+
         System.out.println(empleado2.obtenerDetaller());
     }
 }
