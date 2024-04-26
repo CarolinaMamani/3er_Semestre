@@ -1,0 +1,83 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>126</x><y>125</y><w>126</w><h>243</h></coordinates><panel_attributes>
+_object: CAMARA_
+
+--
+_Private_
+- marca
+- modelo
+- serial
+--
+_Public_
++ encender()
++ apagar()
++ tomarFoto()
+--
+_Protected_
+# grabar()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>333</x><y>134</y><w>90</w><h>27</h></coordinates><panel_attributes>Animal</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>333</x><y>215</y><w>90</w><h>27</h></coordinates><panel_attributes>Cat</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>567</x><y>197</y><w>108</w><h>63</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+FourLegged
+--
++ run(destination)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>441</x><y>278</y><w>108</w><h>63</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+OxyenBreather
+--
++ breathe()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>369</x><y>152</y><w>72</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;-
+Herencia</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>414</x><y>224</y><w>99</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>90;60;90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>387</x><y>197</y><w>198</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;.
+Implementacion</panel_attributes><additional_attributes>200;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>396</x><y>422</y><w>90</w><h>90</h></coordinates><panel_attributes>/Clase Abstracta/
+/Animal/
+--
+..
+--
++
+/makeSound()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>351</x><y>557</y><w>90</w><h>63</h></coordinates><panel_attributes>Cat
+--
+...
+--
++ makeSound()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>477</x><y>557</y><w>90</w><h>63</h></coordinates><panel_attributes>Dog
+--
+...
+--
++ makeSound()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>513</x><y>611</y><w>36</w><h>63</h></coordinates><panel_attributes>lt=()-
+
+</panel_attributes><additional_attributes>10;10;16;48</additional_attributes></element><element><id>UMLClass</id><coordinates><x>486</x><y>656</y><w>90</w><h>27</h></coordinates><panel_attributes>print("ladrar")</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>387</x><y>611</y><w>36</w><h>63</h></coordinates><panel_attributes>lt=()-
+
+</panel_attributes><additional_attributes>10;10;16;48</additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>656</y><w>90</w><h>27</h></coordinates><panel_attributes>print("maullar")</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>387</x><y>503</y><w>153</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;70;30;150;30;150;60;150;30;10;30;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>873</x><y>278</y><w>90</w><h>27</h></coordinates><panel_attributes>Profesor</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1089</x><y>278</y><w>90</w><h>27</h></coordinates><panel_attributes>Curso</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>954</x><y>269</y><w>153</w><h>36</h></coordinates><panel_attributes>lt=&lt;.
+dependencia</panel_attributes><additional_attributes>150;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1089</x><y>332</y><w>90</w><h>27</h></coordinates><panel_attributes>Estudiante</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>909</x><y>296</y><w>198</w><h>72</h></coordinates><panel_attributes>lt=&lt;-
+asociacion</panel_attributes><additional_attributes>200;60;10;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>873</x><y>170</y><w>90</w><h>27</h></coordinates><panel_attributes>Departamento</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>909</x><y>188</y><w>207</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+agregacion (contenedor de objetos)</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>873</x><y>62</y><w>90</w><h>27</h></coordinates><panel_attributes>Universidad</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>909</x><y>80</y><w>207</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+componente (parte del contenedor)</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>909</x><y>530</y><w>45</w><h>27</h></coordinates><panel_attributes>A
+bg=#1122</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>945</x><y>530</y><w>135</w><h>36</h></coordinates><panel_attributes>lt=&lt;.
+dependencia</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1062</x><y>530</y><w>45</w><h>27</h></coordinates><panel_attributes>B
+bg=#1122</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>891</x><y>17</y><w>243</w><h>27</h></coordinates><panel_attributes>   Ejemplo de Relacion entre objetos y clases
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>900</x><y>440</y><w>207</w><h>54</h></coordinates><panel_attributes>       Relacion entre objetos y clases:
+   de la mas debil      a     la mas fuerte
+
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>909</x><y>602</y><w>45</w><h>27</h></coordinates><panel_attributes>A</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1062</x><y>602</y><w>45</w><h>27</h></coordinates><panel_attributes>B</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1359</x><y>602</y><w>45</w><h>27</h></coordinates><panel_attributes>B</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>873</x><y>584</y><w>270</w><h>243</h></coordinates><panel_attributes>bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>891</x><y>647</y><w>234</w><h>153</h></coordinates><panel_attributes>bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>900</x><y>719</y><w>216</w><h>63</h></coordinates><panel_attributes>bg=black</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1179</x><y>584</y><w>243</w><h>153</h></coordinates><panel_attributes>bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1188</x><y>656</y><w>225</w><h>63</h></coordinates><panel_attributes>bg=black</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>945</x><y>593</y><w>135</w><h>36</h></coordinates><panel_attributes>lt=&lt;-
+asociacion</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>945</x><y>665</y><w>135</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+agregacion</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>Relation</id><coordinates><x>945</x><y>728</y><w>135</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+composicion</panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1242</x><y>602</y><w>135</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;.
+implementacion</panel_attributes><additional_attributes>130;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1242</x><y>674</y><w>126</w><h>36</h></coordinates><panel_attributes>lt=&lt;&lt;-
+herencia</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>UMLNote</id><coordinates><x>333</x><y>80</y><w>261</w><h>27</h></coordinates><panel_attributes>   Herencia e Implementacion (interface)
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>126</x><y>80</y><w>126</w><h>27</h></coordinates><panel_attributes>   Encapsulacion
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>333</x><y>386</y><w>261</w><h>27</h></coordinates><panel_attributes>   Polimorfismo
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>909</x><y>737</y><w>45</w><h>27</h></coordinates><panel_attributes>A</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1062</x><y>737</y><w>45</w><h>27</h></coordinates><panel_attributes>B</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>909</x><y>674</y><w>45</w><h>27</h></coordinates><panel_attributes>A</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1062</x><y>674</y><w>45</w><h>27</h></coordinates><panel_attributes>B</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1206</x><y>674</y><w>45</w><h>27</h></coordinates><panel_attributes>A</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1206</x><y>602</y><w>45</w><h>27</h></coordinates><panel_attributes>A</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1350</x><y>674</y><w>45</w><h>27</h></coordinates><panel_attributes>B</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>0</x><y>386</y><w>279</w><h>27</h></coordinates><panel_attributes>   Abstraccion: distintos modelos del mismo objeto
+bg=#ab75</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>431</y><w>126</w><h>144</h></coordinates><panel_attributes>
+_ AirPlane_
+
+--
+- speed
+- altiude
+- rollAngle
+- pitchAngle
+- yawAngle
+--
++ fly()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>153</x><y>431</y><w>126</w><h>90</h></coordinates><panel_attributes>
+_AirPlane_
+
+--
+- seats
+--
++ reserveSeat(n)
+
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>

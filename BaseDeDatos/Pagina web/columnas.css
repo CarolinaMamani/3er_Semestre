@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+
+.munu{
+    width: 25%;
+    float: left;
+
+}
+
+.main{
+    width: 75%;
+    float: left;
+}

@@ -25,9 +25,25 @@ Exsisten las jerarquias
     1- Abstraccion: los objetos creados copian atributos y comportamiento de objetos reales
                     Ej: una clase avion puede existir en un simulador de vuelo (info relacionada con la navegacion) 
                     Y tambien podria existir en un app de reserva de vuelo (mapa de asientos disponibles)
-    2- Polimorfismo: 
+   
+    2- Polimorfismo: capacidad de detectar la verdadera clase de un objeto e invocar su implementacion.
+                    Capacidad de un objeto para fingir ser otra cosa. Normalmente una clase que extiende a una interfaz que implementa
+                    (ver UML)
+
     3- Encapsulacion: capacidad que tiene un objeto de esconder partes de su estado y comportamiento de otros objetos
                     Los pone en privado, y son accesibles solo desde dentro de los metodos de su propia clase
-    4- Herencia
+
+                    1.Private - accesibles solo desde la misma clase
+                    2.Public + accesibles desde el exterior y desde otras clases
+                    3.Protected # accesibles desde las clases hijas
+    
+     (ver UML)
+     
+    4- Herencia: capacidad de crear nuevas clases sobre otras existentes.
+                Ventaja, reutilizacion de codigo. La clases hijas heredan los campos y metodos de la clase padre
+                Se deben implementar todos los metodos abstractos, aun si no tienen sentido en la clase hija
+
+
+        Una unica clase puede tener multiples interfaces (ver UML)
 
 
