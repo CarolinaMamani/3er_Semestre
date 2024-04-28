@@ -20,4 +20,15 @@ en un mismo comando tambien se pueden ejecutar varios contenedores usando sus id
 
 -------Como desarrollar una app usando un contenedor de docker?-----------
 
+1.Creamos un docker file: es un archivo que se tiene que llamar Dockerfile
+        vim Dockerfile
+    nos va a salir en primera linea un FROM, si o si debemos usar una imager Padre que nos va a permitir
+    crear nuestra imagen basado en el. La imagen puede ser una imagen que ya creo otra persona o una que creamos nosotros
+    por lo general se busca una imagen que ya tiene todo lo que necesitamos 
+    ej: si vamos a hacer un app de node, vamos a buscar una imagen de node que ya tenga todas la dependencias que ya necesitamos
+    que ya tenga todo instalado 
+    Siempre ir a dockerHub y buscar por ej: node
+    
+
+
 
