@@ -1,8 +1,10 @@
 
+// let persona3 = new Persona('Carlos','Oteryy'); //no se puede hacer hosting
+
 //Definimos las clases con la palabra reservada class:
 // las clases siempre empiezar con mayuscula
 
-class Persona{
+class Persona{ 
     //cuerpo del clase con {}
     constructor(nombre, apellido){ //agregamos el constructor para crear un objeto
         //dentro de los parentesis agregamos los parametros
@@ -42,6 +44,8 @@ console.log(persona1.nombre);
 console.log(persona1.apellido);
 persona1.apellido= 'Waterson';
 console.log(persona1.apellido);
+
+
 
 let persona2 = new Persona('Anya','Forger');
 console.log(persona2.nombre); //get
