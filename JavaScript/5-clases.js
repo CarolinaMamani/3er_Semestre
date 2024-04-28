@@ -35,8 +35,9 @@ class Persona{ //CLASE PADRE
 
 //CLASE HIJA
 class Empleado extends Persona{
-    constructor(departamento){ //constructor
-        this._departamento = departamento;
+    constructor(nombre, apellido, departamento){ //constructor, y se agregan los paramentos de la clase padre tambien
+       super(nombre, apellido); //si o si se llama al contructor de la clase padre en las clase hijas
+       this._departamento = departamento;
     }
 
     get departamento(){
@@ -51,7 +52,7 @@ class Empleado extends Persona{
 
 
 
-// ahora vamos a crear OBJETOS:
+// ahora vamos a crear OBJETOS de la Clase PADRE:
 //cada objeto maneja sus propios datos
 
 let persona1 = new Persona('Joha','Oter');
@@ -74,3 +75,13 @@ console.log(persona2.apellido);
 persona2.apellido= 'Waterson';
 console.log(persona2.apellido);
 
+
+
+// OBJETOS de la Clase HIJA:
+let empleado1 = new Empleado('Maria','Luz','Sistemas');
+console.log(empleado1);
+console.log(empleado1.nombre);
+
+let empleado2 = new Empleado('Carolina','Mamani','Electromecanica');
+console.log(empleado2);
+console.log(empleado2.departamento);
