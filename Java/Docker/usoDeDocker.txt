@@ -1,0 +1,23 @@
+Instalacion de Docker video 1 SUCCESSFUL
+
+---------Comandos comunes en docker para correr e iniciar contenedores basados en imagenes:----------
+     docker run   : Permite correr una imagen que se convierte en un contenedor
+        con un tag:  docker run postgres:lastest
+     docker pull    : solo descarga la imagen pero no lo va a correr
+     docker images | head : todas las imagenes que tengo hosteada en mi computadora
+     docker ps  : muestra los contenedores que estamos corriendo
+     docker ps -a   : muestra todos los contenedores que corrieron hace un tiempo
+     docker star f2a09f7a79bd : se puede volver a correr un contenerdor con su id para que recupere los ultimos datos que hayas agregado
+     docker logs f2a09f7a79bd : para ver los longs de un contenedor especifico con su id
+     docker logs -f f2a09f7a79bd : con la -f muestra los logs pero no cierra sino se sigue el long
+     docker exec : ejecuta un comando dentro de un contenedor que ya esta corriendo
+        docker exec -it f2a09f7a79bd sh : este comando -i crea una secion interactiva, el t emula una terminal dentro del contenedor(id). Entonces se puede ejecutar por ejemplo un sh (una shell)
+            ls  : dentro ahora podemos hacer el ls para ver el contenido del contenedor
+        docker stop f2a09f7a79bd: detiene el contenedor especifico con su id
+    docker run -d nginx   : para correr el contenedor en background usando -d y el nombre de la imagen
+
+en un mismo comando tambien se pueden ejecutar varios contenedores usando sus id o nombres
+
+-------Como desarrollar una app usando un contenedor de docker?-----------
+
+
