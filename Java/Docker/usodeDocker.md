@@ -76,3 +76,11 @@ Primero si tenemos abierto esa imagen que no queremos la cerramos con: `docker s
 Ahora si vamos a recuperar los datos:
 
 - `docker run -d -v /Users/kbs/ejemplo-docker/app/etc:/etc/todos -p 3000:3000 nombreImagen`
+
+#### links de los videos:
+
+- https://www.youtube.com/watch?v=CV_Uf3Dq-EU&ab_channel=PeladoNerd | Desde minuto 36
+- https://www.youtube.com/watch?v=4Dko5W96WHg&ab_channel=HolaMundo | Falta
+- https://www.youtube.com/watch?v=9eTVZwMZJsA&ab_channel=RingaTech | Falta
+- https://www.youtube.com/watch?v=dPh2C6kswPQ&ab_channel=RingaTech | Falta
+- https://www.youtube.com/watch?v=hQgvt-s-AHQ&ab_channel=Platzi | Falta
