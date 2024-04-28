@@ -1,0 +1,19 @@
+<diagram program="umletino" version="15.1"><zoom_level>12</zoom_level><element><id>UMLClass</id><coordinates><x>564</x><y>240</y><w>252</w><h>168</h></coordinates><panel_attributes>&lt;&lt;Persona&gt;&gt; Clase Padre
+--
+_nombre: String
+_apellido: String
+--
+get nombre()
+set nombre()
+get apellido()
+set apellido()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>564</x><y>516</y><w>252</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Empleado&gt;&gt; Clase Hija
+--
+_departamento: String
+--
+get departamento()
+set departamento()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>672</x><y>396</y><w>84</w><h>144</h></coordinates><panel_attributes>lt=&lt;.
+extends</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLNote</id><coordinates><x>564</x><y>96</y><w>264</w><h>60</h></coordinates><panel_attributes>Herencia
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element></diagram>

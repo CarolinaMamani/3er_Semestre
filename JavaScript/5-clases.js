@@ -4,7 +4,7 @@
 //Definimos las clases con la palabra reservada class:
 // las clases siempre empiezan con mayuscula
 
-class Persona{ 
+class Persona{ //CLASE PADRE
     //cuerpo del clase con {}
     constructor(nombre, apellido){ //agregamos el constructor para crear un objeto
         //dentro de los parentesis agregamos los parametros
@@ -32,6 +32,24 @@ class Persona{
    }
 
 }
+
+//CLASE HIJA
+class Empleado extends Persona{
+    constructor(departamento){ //constructor
+        this._departamento = departamento;
+    }
+
+    get departamento(){
+        return this._departamento;
+    }
+
+    set departamento(departamento){
+        this._departamento = departamento;
+    }
+}
+
+
+
 
 // ahora vamos a crear OBJETOS:
 //cada objeto maneja sus propios datos
