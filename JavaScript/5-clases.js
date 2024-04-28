@@ -2,7 +2,7 @@
 // let persona3 = new Persona('Carlos','Oteryy'); //no se puede hacer hosting
 
 //Definimos las clases con la palabra reservada class:
-// las clases siempre empiezar con mayuscula
+// las clases siempre empiezan con mayuscula
 
 class Persona{ 
     //cuerpo del clase con {}
