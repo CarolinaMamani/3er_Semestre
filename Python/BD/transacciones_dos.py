@@ -9,12 +9,12 @@ try:
    #nueva insercion de elemento
    cursor = conexion.cursor()
    sentencia = 'INSERT INTO persona(nombre, apellido, email)VALUES(%s, %s, %s)'
-   valores = ('Luwrty','Mayri','melu@mail.com')
+   valores = ('Roger','Waterson','rabit@mail.com')
    cursor.execute(sentencia,valores)
    
    #modificando un elemento
    sentencia = 'UPDATE persona SET nombre=%s, apellido=%s, email=%s WHERE id_persona=%s'
-   valores = ('Juan','Juares','jcm@mail.com',1)
+   valores = ('Yanes','Waterson','jwton@mail.com',1)
    cursor.execute(sentencia,valores)
    
    conexion.commit() # se cierra la transaccion
