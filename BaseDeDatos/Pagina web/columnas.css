@@ -1,14 +1,127 @@
-*{
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.munu{
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.fila::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+header {
+    background: linear-gradient(135deg, #6c5ce7, #4a3ca5); /* Degradado violeta */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu {
     width: 25%;
     float: left;
-
 }
 
-.main{
+.menu h2 {
+    color: #6c5ce7;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.menu ul {
+    padding-left: 20px;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    color: #333;
+}
+
+.main {
     width: 75%;
     float: left;
+}
+
+.producto {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 5px;
+}
+
+.precio {
+    font-weight: bold;
+    color: #6c5ce7;
+}
+
+button {
+    background: linear-gradient(135deg, #6c5ce7, #4a3ca5); /* Degradado violeta para el botón */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #4a3ca5, #2e2259); /* Degradado violeta más oscuro al pasar el cursor */
+}
+
+footer {
+    background: linear-gradient(135deg, #4a3ca5, #2e2259); /* Degradado violeta oscuro para el pie de página */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 14px;
 }
