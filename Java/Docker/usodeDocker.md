@@ -1,5 +1,7 @@
 ### Instalación de Docker video 1 - EXITOSA
 
+> # **Docker nos permite correr miles de cosas sin tener la necesidad de tener que instalarlos en la computadora**
+
 > ## Comandos comunes en Docker
 
 ### (para correr e iniciar contenedores basados en imágenes:)
@@ -106,10 +108,47 @@ Podemos ver que los cambios que hicimos aun permanecen, no importa desde donde l
 2.  En ubuntu escribimos `docker login` nos pedira usuario y contrasena
 3.  Vemos que imagen queremos con `docker images | head` copiamos el id de esa imagen (ej: 78b6f5560d5f)
 4.  Volvemos a tagear esa imagen con nuestro nombre de usuario `docker tag 78b6f5560d5f lumiyu/nombreImegen:v2`
+5.  Ahora si podemos hacer Push! `docker push lumiyu/nombreImegen:v2` comenzara a subir la imagen
+6.  En el DockerHub nos saldra la imagen con ese nombre "lumiyu/nombreImegen" y van a aparecer los tag que hayamos subido.
 
-#### links de los videos:
+**Entoncres cualquier persona se puede descargar mi imagen usando `docker push lumiyu/nombreImegen:v2`**
 
-- https://www.youtube.com/watch?v=CV_Uf3Dq-EU&ab_channel=PeladoNerd | Desde minuto 36
+> ## Muchas veces necesitamos mas de 1 contenedor:
+>
+> Lo mas comun es tener un contener con una base de datos, y tener otro contener donde se corre la app y que se conecte a esa base de datos.  
+> Queremos que la app se conecte a ese contenedor de BD. Es recomendable siempre tener las 2 cosas separadas
+
+Vamos a hacer un Multi Conteiner  
+ Ejemplo:
+Cramos una carpata para almacenarlos: `cd multi-container`  
+Vamos a correr 2 contenedores: Base de Datos y Aplicacion
+
+## MySQL
+
+1.  Creamos una nueva Red: `docker network create todo-app`despues de create va el nombre ej:`todo-app`
+2.  Colocarelos el siguente comando que esta largo:
+    > > `docker run -d \` el `-d` es para que inicie como detach (en background)  
+    > > `--network todo-app --network-alias mysql \` le pasamos la network que creamos (todo-app) y una nueva linea (mysql). Nos va a facilitar encontrar la IP dentro del contenedor, no va hacer necesario poner la IP  
+    > > `-v todo-mysql-data:/var/lib/mysql \` le vamos a pasar un volumen `-v` creara un directorio llamado "todo-mysql-data" y lo va a montar dentro de "var/lib/mysql"  
+    > > `-e MYSQL_ROOT_PASSWORD=secret \` el `-e` agrega las variables de entorno a mysql, entonces la contasena seria "secret"  
+    > > `-e MYSQL_DATABASE=todos \` aqui se va a crear una base de datos llamada "todos"  
+    > > `mysql:5.7` y aqui le pasamos la imagen que queremos correr (mysql) y el tag o la version (5.7)
+
+Todo esto lo podemos corroborar en la documentacion de Docker sobre MySQL: **hub.docker.com/\_/mysql**
+
+_**Siempre leer las documentaciones de cualquier lenguaje porque nos ayuda a aprender nuevas funciones que nos seran muy utiles en el futuro**_
+
+Con `docker ps` veremos que el contenedor ya esta corriendo.
+
+- `docker exec -it 78b6f5560d5f mysql -p` el `exec` nos permite correr comandos dentro de contenedores que ya estan corriendo. El `-it` es para que no levante una terminal interactiva. `mysql -p` es lo que se va a correr dentro del contenedor.
+- - Nos pedira la Password, ponemos la que pusimos (secret)
+- - Escribimos `show databases;` en la terminal que nos salio de mysql, ahi vemos que si se creo la base de datos "todos"
+
+### **Como nos conectamos a MySQL?**
+
+### links de los videos:
+
+- https://www.youtube.com/watch?v=CV_Uf3Dq-EU&ab_channel=PeladoNerd | Desde minuto 51
 - https://www.youtube.com/watch?v=4Dko5W96WHg&ab_channel=HolaMundo | Falta
 - https://www.youtube.com/watch?v=9eTVZwMZJsA&ab_channel=RingaTech | Falta
 - https://www.youtube.com/watch?v=dPh2C6kswPQ&ab_channel=RingaTech | Falta
