@@ -1,6 +1,6 @@
 ### Instalación de Docker video 1 - EXITOSA
 
-## Comandos comunes en Docker
+> ## Comandos comunes en Docker
 
 ### (para correr e iniciar contenedores basados en imágenes:)
 
@@ -21,7 +21,7 @@
 
 En un mismo comando también se pueden ejecutar varios contenedores usando sus id o nombres.
 
-## Cómo desarrollar una app usando un contenedor de Docker?
+> ## Cómo desarrollar una app usando un contenedor de Docker?
 
 1. Creamos un Dockerfile que contiene:
 
@@ -44,7 +44,7 @@ En un mismo comando también se pueden ejecutar varios contenedores usando sus i
    - `CMD ["node", "/app/src/index.js"]`: Por ejemplo, en el caso de arriba. Queremos que corra "node" y como argumento "/app/src/index.js" cuando se inicie el contenedor va a correr ese binario.
    - También se podría usar `ENTRYPOINT node`: El entrypoint permite dejar abierto un comando para después pasarle argumentos. Es útil en una imagen de Python. Cuando se hace correr la imagen al final tendríamos que pasarle este argumento `/app/src/index.js`. Todo esto es en el caso de que se tenga varios binarios que se quieran correr.
 
-## Cómo construir un contenedor?
+> ## Cómo construir un contenedor?
 
 1. Usamos el comando:
 
@@ -69,13 +69,43 @@ En un mismo comando también se pueden ejecutar varios contenedores usando sus i
 
    - `docker run -dp 3000:3000 nombreImagen`, pero vemos que se crea otro contenedor con otro id, y todos los agregados ya no están, vuelve a como está antes de cualquier modificación.
 
-### Como mantener esos datos?
+> ### Como mantener esos datos?
 
 Primero si tenemos abierto esa imagen que no queremos la cerramos con: `docker stop idnombreImagen`.
 
 Ahora si vamos a recuperar los datos:
 
 - `docker run -d -v /Users/kbs/ejemplo-docker/app/etc:/etc/todos -p 3000:3000 nombreImagen`
+
+Y cuando demos modifiquemos, como estamos usando los directorios "etc" se van a guardar en esa capeta. Cuando iniciamos un nuevo contenedor con esos directorios, se crear de forma automatica y seguiran guardando los datos que se agregaron
+
+- `ls etc/todo.db`
+  Lo que modifique ahi dentro, ya desde dentro del contenedor o las carpetas, se iran guardando  
+   Nos permite guardar una **Base de Datos**  
+   Nos permite hacer cambion sin tener que estar recontruyendo la imegen otra vez
+
+Para moficar un archivo dentro del Contenedor: `vim src/static/js/app.js`  
+Una vez hechos los cambios:
+
+- `docker run -d -v /Users/kbs/ejemplo-docker/app/etc:/etc/todos -p 3000:3000 -v /Users/kbs/ejemplo-docker/app/src:/app/src  nombreImagen`
+
+Podemos ver que los cambios que hicimos aun permanecen, no importa desde donde los modifiquemos. Es decir que poder editar tranquilamente en Visual Studio Code y desarrollar todo que queremos.
+
+> ### Una vez que termine que trabajar:
+>
+> Tenemos que meter esos cambios dentro de la imagen. Tenemos que reconstruir la imagen:
+
+- `docker build -t nombreImagen:v2 .` le ponemos un tag ` v2 .`
+
+> ## Como compartir la imagen que hice en mi compu, a otra persona?
+>
+> DockerHub da hostting gratruito para imagenes publicas, aunque solo para una  
+> Vamos a subir la imagen a nuestro registro de Docker:
+
+1.  Nos creamos una cuenta en DockerHub
+2.  En ubuntu escribimos `docker login` nos pedira usuario y contrasena
+3.  Vemos que imagen queremos con `docker images | head` copiamos el id de esa imagen (ej: 78b6f5560d5f)
+4.  Volvemos a tagear esa imagen con nuestro nombre de usuario `docker tag 78b6f5560d5f lumiyu/nombreImegen:v2`
 
 #### links de los videos:
 
