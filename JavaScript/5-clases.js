@@ -35,6 +35,14 @@ class Persona{ //CLASE PADRE
    nombreCompleto(){
         return this._nombre+' '+this._apellido;
    }
+   
+   //Sobreescribiendo el metodo de la clase padre(Object)
+   toString(){ //regrsa un String
+    //se aplica el polimorfismo que significa = multiples formas en tiempo de ejecucion
+    //El metodo que se ejecuta depende si es una referencia(objeto) de tipo padre o hija
+        return this.nombreCompleto();
+    }
+
 }
 
 
@@ -58,10 +66,6 @@ class Empleado extends Persona{
     nombreCompleto(){
         
         return super.nombreCompleto()+', '+this._departamento;
-    }
-
-    toString(){ //regrsa un String
-        return this.nombreCompleto();
     }
 
 }
@@ -109,10 +113,9 @@ console.log(empleado2.departamento);
 
 
 //Polimrfismo:
-//si usamos un metodo de la clase hija va usar la sobreescritura que hicimos en la clase hija:
-// nombreCompleto de la clase Hija
+//usando empleado1 hacemos el llamado desde la clase hija nombreCompleto la Sobreescritura
 console.log(empleado1.toString());
 
 // si usamos un metodo de la clase padre usa la el metodo de la clase padre
 // nombreCompleto de la clase Padre
-console.log(persona1.toString());
+console.log(persona2.toString());
