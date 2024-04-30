@@ -59,6 +59,11 @@ class Empleado extends Persona{
         
         return super.nombreCompleto()+', '+this._departamento;
     }
+
+    toString(){ //regrsa un String
+        return this.nombreCompleto();
+    }
+
 }
 
 
@@ -98,3 +103,16 @@ let empleado2 = new Empleado('Carolina','Mamani','Electromecanica');
 console.log(empleado2);
 console.log(empleado2.departamento);
 
+
+// Prototype nos permite agregar atributos o metodos de manera dinamica a nuestras clases
+//Object.prototype.toString
+
+
+//Polimrfismo:
+//si usamos un metodo de la clase hija va usar la sobreescritura que hicimos en la clase hija:
+// nombreCompleto de la clase Hija
+console.log(empleado1.toString());
+
+// si usamos un metodo de la clase padre usa la el metodo de la clase padre
+// nombreCompleto de la clase Padre
+console.log(persona1.toString());
