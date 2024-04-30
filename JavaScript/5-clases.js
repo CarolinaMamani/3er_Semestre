@@ -31,7 +31,13 @@ class Persona{ //CLASE PADRE
         this._apellido = apellido;
    }
 
+   //Funcion o metodo de la clase padre. Heredamos este metodo a la clase Hija
+   nombreCompleto(){
+        return this._nombre+' '+this._apellido;
+   }
 }
+
+
 
 //CLASE HIJA
 class Empleado extends Persona{
@@ -80,8 +86,9 @@ console.log(persona2.apellido);
 // OBJETOS de la Clase HIJA:
 let empleado1 = new Empleado('Maria','Luz','Sistemas');
 console.log(empleado1);
-console.log(empleado1.nombre);
+console.log(empleado1.nombreCompleto());
 
 let empleado2 = new Empleado('Carolina','Mamani','Electromecanica');
 console.log(empleado2);
 console.log(empleado2.departamento);
+
