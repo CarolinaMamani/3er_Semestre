@@ -194,14 +194,55 @@ Es decir que podemos correr 2 contendores conectados entre si. Y haciendo los vo
 
 Siempre al terminar de usar los contenedores debemos cerrarlos con `docker stop ID`
 
-## DOCKER COMPOST (MySQL, automaticacion)
+## DOCKER COMPOSE (MySQL, automatizacion)
 
 Es una forma facil de escribir todas las lineas de docker y sus configuraciones en un solo archivo, y que sea mas facil de mirar y administrar
 
 1. `vlm docker-compose.yaml` Vamos a abrir ese archivo "**yaml**" . Podemos ver que tiene la version del a sitaxis y la seccion de servicios.
-   Dentro de la seccion de servicios, declaramos los servicos que vamos a correr dentro de docker compose. Esto nos va a permitir correr varios contendores usando un solo archivo, y automaticamente los va a meter a la misma red.
+   Dentro de la seccion de **Servicios**, declaramos los servicos que vamos a correr dentro de docker compose. Esto nos va a permitir correr varios contendores usando un solo archivo, y automaticamente los va a meter a la misma red.
 
-Automaticamente Docker compose va a crear una nueva red cada ves que creemos un archivo docker
+Automaticamente Docker compose va a crear una nueva red (como hicimos con el **todo-app**) cada vez que creemos un archivo de docker compose. Y va meter todos los servicios que estan dentro del archivo en la misma red.
+Por ejemplo en el archivo vamos a tener 2 servicio: app y mysql
+
+- Achivo de Docker compose:
+
+  - `version: "3.7"`
+
+    `services:`
+
+    `app:`
+
+    `image: lumiyu/nombreImagen:v2`  
+     `ports:`  
+     `- 3000:3000`  
+     `environment:`  
+     `MYSQL_HOST: mysql`  
+     `MYSQL_USER: root`  
+     `MYSQL_PASSWORD: secret`  
+     `MYSQL_DB: todos`
+
+    `mysql:`
+
+    `image: mysql:5.7`  
+     `volumes:`  
+     `- ./todo-mysql-data:/var/lib/mysql` el `./` es una forma de dar la ruta de nuestro directorio  
+     `environment:`  
+     `MYSQL_ROOT_PASSWORD: secret`  
+     `MYSQL_DATABASE: todos`
+
+en esos archivos podemos modificar los nombres y contrasenias.
+Esta es la mejor forma. Y evita errores
+
+- Guardamos el archivo con `x`
+
+### Como hacemos para correr lo que esta dentro de Docker Compose?
+
+Ejecutamos el siguiente comendo:
+
+- `docker-compose up -d`
+  Ahora ya se creo todo, la red y los 2 contenedores de app y mysql. Encaso de alguna falla volver a ejcutar el `docker-compose up -d` porque algunos tardo mucho en crearse.
+
+  https://docs.docker.com/compose/startup-order/
 
 ### links de los videos:
 
