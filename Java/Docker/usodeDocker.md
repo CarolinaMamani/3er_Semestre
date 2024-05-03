@@ -128,7 +128,7 @@ Vamos a correr 2 contenedores: Base de Datos y Aplicacion
 1.  Creamos una nueva Red: `docker network create todo-app`despues de create va el nombre ej:`todo-app`
 2.  Colocarelos el siguente comando que esta largo:
     > > `docker run -d \` el `-d` es para que inicie como detach (en background)  
-    > > `--network todo-app --network-alias mysql \` le pasamos la network que creamos (todo-app) y una nueva linea (mysql). Nos va a facilitar encontrar la IP dentro del contenedor, no va hacer necesario poner la IP  
+    > > `--network todo-app --network-alias mysql \` le pasamos la **network** que creamos (**todo-app**) y una nueva linea (mysql). Nos va a facilitar encontrar la IP dentro del contenedor, no va hacer necesario poner la IP  
     > > `-v todo-mysql-data:/var/lib/mysql \` le vamos a pasar un volumen `-v` creara un directorio llamado "todo-mysql-data" y lo va a montar dentro de "var/lib/mysql"  
     > > `-e MYSQL_ROOT_PASSWORD=secret \` el `-e` agrega las variables de entorno a mysql, entonces la contasena seria "secret"  
     > > `-e MYSQL_DATABASE=todos \` aqui se va a crear una base de datos llamada "todos"  
@@ -142,13 +142,70 @@ Con `docker ps` veremos que el contenedor ya esta corriendo.
 
 - `docker exec -it 78b6f5560d5f mysql -p` el `exec` nos permite correr comandos dentro de contenedores que ya estan corriendo. El `-it` es para que no levante una terminal interactiva. `mysql -p` es lo que se va a correr dentro del contenedor.
 - - Nos pedira la Password, ponemos la que pusimos (secret)
-- - Escribimos `show databases;` en la terminal que nos salio de mysql, ahi vemos que si se creo la base de datos "todos"
+- - Escribimos `show databases;` en la terminal que nos salio de mysql, ahi vemos que si se creo la base de datos "todos".
+
+Pudimos correr un comando dentro del contenedor para conectarnos a esa base de datos.
+
+- - Para salir del mysql: `^DBye`
 
 ### **Como nos conectamos a MySQL?**
 
+Por ejemplo, vamos a usar una imagen llamada "nicolaka/netshoot", la queremos conectar al contendor de mysql a travez de la network que creamos (todo-app).
+Escribirmos esto:
+
+- `docker run -it --network todo-app nicolaka/netshoot`  
+  esta parte de `--network todo-app` es con la que nos conectamos en el mysql
+
+- `dig mysql` veremos que resolvio la IP del contenedor de MySQL.
+- `CTRL + C` para salir del contendor
+
+Esto nos permite que cualquier contenedor que corramos en nuestra red todo-app pueda conectarse al cotenedor de mysql
+
+### **Correr nuestra APP**
+
+Vamos a correrla en el MySQL, la app me permite que le pase variables de entorno para conectarme a mysql
+
+- `docker run -dp 3000:3000 \` le pasamos el puerto 3000 para poder verlo en el navegador
+- `--network todo-app \` nuestra network
+- `-e MYSQL_HOST=mysql \`
+- `-e MYSQL_USER=root \`
+- `-e MYSQL_PASSWORD=secret \` nuestra contrasenia
+- `-e MYSQL_DB=todos \` nuestra base de datos
+- `nombreImagen:v2` el nombre de nuesta app y la version de esta que queremos
+
+Con `docker ps` vemos que se estan corriendo los 2 contenedores
+
+- Para saber si estamos conectados podemos corroborar con: `docker logs bd6a6f68b887` le colocamos el ID del contenedor de nuesta app nombreImagen
+- Para cerrar el contenedor: `docker stop bd6a6f68b887` aun usando el ID
+
+Y si abrimos el contendor otra vez usando los comandos del principio:
+
+- `docker run -dp 3000:3000 \`
+- `--network todo-app \`
+- `-e MYSQL_HOST=mysql \`
+- `-e MYSQL_USER=root \`
+- `-e MYSQL_PASSWORD=secret \`
+- `-e MYSQL_DB=todos \`
+- `nombreImagen:v2`
+
+Veremos que todos los cambios que hayamos hecho siguen estado porque se guardaros en la base de datos.
+
+Es decir que podemos correr 2 contendores conectados entre si. Y haciendo los volumenes persistentes para mysql (para el guardado de esos datos)
+
+Siempre al terminar de usar los contenedores debemos cerrarlos con `docker stop ID`
+
+## DOCKER COMPOST (MySQL, automaticacion)
+
+Es una forma facil de escribir todas las lineas de docker y sus configuraciones en un solo archivo, y que sea mas facil de mirar y administrar
+
+1. `vlm docker-compose.yaml` Vamos a abrir ese archivo "**yaml**" . Podemos ver que tiene la version del a sitaxis y la seccion de servicios.
+   Dentro de la seccion de servicios, declaramos los servicos que vamos a correr dentro de docker compose. Esto nos va a permitir correr varios contendores usando un solo archivo, y automaticamente los va a meter a la misma red.
+
+Automaticamente Docker compose va a crear una nueva red cada ves que creemos un archivo docker
+
 ### links de los videos:
 
-- https://www.youtube.com/watch?v=CV_Uf3Dq-EU&ab_channel=PeladoNerd | Desde minuto 51
+- https://www.youtube.com/watch?v=CV_Uf3Dq-EU&ab_channel=PeladoNerd | Desde minuto 57
 - https://www.youtube.com/watch?v=4Dko5W96WHg&ab_channel=HolaMundo | Falta
 - https://www.youtube.com/watch?v=9eTVZwMZJsA&ab_channel=RingaTech | Falta
 - https://www.youtube.com/watch?v=dPh2C6kswPQ&ab_channel=RingaTech | Falta
