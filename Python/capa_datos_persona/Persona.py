@@ -1,5 +1,8 @@
+
+from logger_base import log
+
 class Persona:
-    def __init__(self, id_persona, nombre, apellido, email): #metodo dander init
+    def __init__(self, id_persona=None, nombre=None, apellido=None, email=None): #metodo dander init
         self._id_persona = id_persona
         self._nombre = nombre
         self._apellido = apellido
@@ -17,7 +20,7 @@ class Persona:
     @property
     def id_persona(self):
         return self._id_persona
-    @id._persona.setter
+    @id_persona.setter
     def id_persona(self, id_persona):
         self._id_persona = id_persona
     
@@ -44,3 +47,11 @@ class Persona:
     @email.setter
     def email(self, email):
         self._email = email
+        
+if __name__ == '__main__':
+    persona1 = Persona(1,'Karolina','Mamani','cmama@mail.com')
+    log.debug(persona1)
+    persona2 = Persona(nombre='Jandet',apellido='OUTR',email='fkg@mail.com')
+    log.debug(persona2)
+    persona1 = Persona(id_persona = 1)
+    log.debug(persona1)
