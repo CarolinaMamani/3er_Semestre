@@ -6,8 +6,8 @@
 
 class Persona{ //CLASE PADRE
 
-    static contadorObjetosPersona = 0; // atributo static
-    email = 'Valor default email'; // Atributo no static
+    static contadorPersonas = 0; // atributo static
+    //email = 'Valor default email'; // Atributo no static
 
 
     //cuerpo del clase con {}
@@ -16,8 +16,8 @@ class Persona{ //CLASE PADRE
         //dentro del constructor inicializamos los atributos
         this._nombre = nombre; //ponemos _ para diferenciar el atributo(_nombre) del nombre
         this._apellido = apellido;
-        Persona.contadorObjetosPersona++;
-        console.log('Se incremento el contador: '+Persona.contadorObjetosPersona);
+        this.idPersona = Persona.contadorPersonas++;
+        //console.log('Se incremento el contador: '+Persona.contadorObjetosPersona);
 
     }//sino se define el constructor javascript lo define de manera automatica
 
@@ -40,7 +40,7 @@ class Persona{ //CLASE PADRE
 
    //Funcion o metodo de la clase padre. Heredamos este metodo a la clase Hija
    nombreCompleto(){
-        return this._nombre+' '+this._apellido;
+        return this.idPersona+' '+this._nombre+' '+this._apellido;
    }
    
    //Sobreescribiendo el metodo de la clase padre(Object)
@@ -145,8 +145,8 @@ Empleado.saludar();
 Empleado.saludar2(empleado1);
 
 //console.log(persona1.contadorObjetosPersona);
-console.log(Persona.contadorObjetosPersona);
-console.log(Empleado.contadorObjetosPersona); //las clases hijas heredan los atributos staticos
+console.log(Persona.contadorPersonas);
+console.log(Empleado.contadorPersonas); //las clases hijas heredan los atributos staticos
 
 
 //atributo no estatico se asocian a los objetos
@@ -154,4 +154,7 @@ console.log(persona1.email);
 console.log(empleado1.email);
 //console.log(Persona.email); no se puede acceder desde la clase  porque es no estatico
 
-
+console.log(persona1.toString());
+console.log(persona2.toString());
+console.log(empleado1.toString());
+console.log(Persona.contadorPersonas);
