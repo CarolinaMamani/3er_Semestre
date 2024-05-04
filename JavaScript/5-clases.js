@@ -135,7 +135,6 @@ console.log(empleado1.toString());
 // nombreCompleto de la clase Padre
 console.log(persona2.toString());
 
-
 //persona1.saludar(); no se utiliza desde el objeto
 //pero si desde la clase
 Persona.saludar();
@@ -157,4 +156,14 @@ console.log(empleado1.email);
 console.log(persona1.toString());
 console.log(persona2.toString());
 console.log(empleado1.toString());
+
+
+
+
+console.log(Persona.contadorPersonas);
+let persona3 = new Persona('Celia', 'Torrez');
+console.log(persona3.toString());
+
+
+
 console.log(Persona.contadorPersonas);
