@@ -6,7 +6,8 @@
 
 class Persona{ //CLASE PADRE
 
-    static contadorObjetosPersona = 0;
+    static contadorObjetosPersona = 0; // atributo static
+    email = 'Valor default email'; // Atributo no static
 
 
     //cuerpo del clase con {}
@@ -148,7 +149,9 @@ console.log(Persona.contadorObjetosPersona);
 console.log(Empleado.contadorObjetosPersona); //las clases hijas heredan los atributos staticos
 
 
-
-
+//atributo no estatico se asocian a los objetos
+console.log(persona1.email);
+console.log(empleado1.email);
+//console.log(Persona.email); no se puede acceder desde la clase  porque es no estatico
 
 
