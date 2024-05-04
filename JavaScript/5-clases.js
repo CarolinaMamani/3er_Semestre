@@ -43,11 +43,11 @@ class Persona{ //CLASE PADRE
         return this.nombreCompleto();
     }
     static saludar(){
-        console.log('Saludos desde el metodo static')
+        console.log('Saludos desde el metodo static');
     }
 
     static saludar2(persona){
-        console.log(persona.nombre)
+        console.log(persona.nombre+' '+persona.apellido+' '+persona.departamento);
     }
 
 
@@ -133,3 +133,6 @@ console.log(persona2.toString());
 //pero si desde la clase
 Persona.saludar();
 Persona.saludar2(persona1);
+
+Empleado.saludar();
+Empleado.saludar2(empleado1);
