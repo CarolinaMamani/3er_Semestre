@@ -5,12 +5,19 @@
 // las clases siempre empiezan con mayuscula
 
 class Persona{ //CLASE PADRE
+
+    static contadorPersonas = 0; // atributo static
+    //email = 'Valor default email'; // Atributo no static
+
+
     //cuerpo del clase con {}
     constructor(nombre, apellido){ //agregamos el constructor para crear un objeto
         //dentro de los parentesis agregamos los parametros
         //dentro del constructor inicializamos los atributos
         this._nombre = nombre; //ponemos _ para diferenciar el atributo(_nombre) del nombre
         this._apellido = apellido;
+        this.idPersona = Persona.contadorPersonas++;
+        //console.log('Se incremento el contador: '+Persona.contadorObjetosPersona);
 
     }//sino se define el constructor javascript lo define de manera automatica
 
@@ -33,7 +40,7 @@ class Persona{ //CLASE PADRE
 
    //Funcion o metodo de la clase padre. Heredamos este metodo a la clase Hija
    nombreCompleto(){
-        return this._nombre+' '+this._apellido;
+        return this.idPersona+' '+this._nombre+' '+this._apellido;
    }
    
    //Sobreescribiendo el metodo de la clase padre(Object)
@@ -42,6 +49,14 @@ class Persona{ //CLASE PADRE
     //El metodo que se ejecuta depende si es una referencia(objeto) de tipo padre o hija
         return this.nombreCompleto();
     }
+    static saludar(){
+        console.log('Saludos desde el metodo static');
+    }
+
+    static saludar2(persona){
+        console.log(persona.nombre+' '+persona.apellido+' '+persona.departamento);
+    }
+
 
 }
 
@@ -119,3 +134,27 @@ console.log(empleado1.toString());
 // si usamos un metodo de la clase padre usa la el metodo de la clase padre
 // nombreCompleto de la clase Padre
 console.log(persona2.toString());
+
+
+//persona1.saludar(); no se utiliza desde el objeto
+//pero si desde la clase
+Persona.saludar();
+Persona.saludar2(persona1);
+
+Empleado.saludar();
+Empleado.saludar2(empleado1);
+
+//console.log(persona1.contadorObjetosPersona);
+console.log(Persona.contadorPersonas);
+console.log(Empleado.contadorPersonas); //las clases hijas heredan los atributos staticos
+
+
+//atributo no estatico se asocian a los objetos
+console.log(persona1.email);
+console.log(empleado1.email);
+//console.log(Persona.email); no se puede acceder desde la clase  porque es no estatico
+
+console.log(persona1.toString());
+console.log(persona2.toString());
+console.log(empleado1.toString());
+console.log(Persona.contadorPersonas);
