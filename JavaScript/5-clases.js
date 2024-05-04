@@ -5,12 +5,18 @@
 // las clases siempre empiezan con mayuscula
 
 class Persona{ //CLASE PADRE
+
+    static contadorObjetosPersona = 0;
+
+
     //cuerpo del clase con {}
     constructor(nombre, apellido){ //agregamos el constructor para crear un objeto
         //dentro de los parentesis agregamos los parametros
         //dentro del constructor inicializamos los atributos
         this._nombre = nombre; //ponemos _ para diferenciar el atributo(_nombre) del nombre
         this._apellido = apellido;
+        Persona.contadorObjetosPersona++;
+        console.log('Se incremento el contador: '+Persona.contadorObjetosPersona);
 
     }//sino se define el constructor javascript lo define de manera automatica
 
@@ -136,3 +142,13 @@ Persona.saludar2(persona1);
 
 Empleado.saludar();
 Empleado.saludar2(empleado1);
+
+//console.log(persona1.contadorObjetosPersona);
+console.log(Persona.contadorObjetosPersona);
+console.log(Empleado.contadorObjetosPersona); //las clases hijas heredan los atributos staticos
+
+
+
+
+
+
