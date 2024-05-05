@@ -10,13 +10,23 @@ class Persona{ //CLASE PADRE
     //email = 'Valor default email'; // Atributo no static
 
 
+    static get MAX_OBJ(){ //Este metodo simula una constante
+        return 5;
+    }
+
     //cuerpo del clase con {}
     constructor(nombre, apellido){ //agregamos el constructor para crear un objeto
         //dentro de los parentesis agregamos los parametros
         //dentro del constructor inicializamos los atributos
         this._nombre = nombre; //ponemos _ para diferenciar el atributo(_nombre) del nombre
         this._apellido = apellido;
-        this.idPersona = Persona.contadorPersonas++;
+        if(Persona.contadorPersonas < Persona.MAX_OBJ){
+            this.idPersona = ++Persona.contadorPersonas;            
+        }
+        else{
+            console.log('Se ha superado el maximo de objetos permitidos')
+        }
+        
         //console.log('Se incremento el contador: '+Persona.contadorObjetosPersona);
 
     }//sino se define el constructor javascript lo define de manera automatica
@@ -167,3 +177,14 @@ console.log(persona3.toString());
 
 
 console.log(Persona.contadorPersonas);
+
+
+
+//contante en atributo estatico
+console.log(Persona.MAX_OBJ); //como es de tipo get, los () no son necesarios
+//Persona.MAX_OBJ = 10; // no se puede modificar ni alterar
+console.log(Persona.MAX_OBJ);
+
+let persona4 = new Persona('Geniatri','Hionda')
+console.log(persona4.toString());
+
