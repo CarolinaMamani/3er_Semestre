@@ -246,7 +246,7 @@ Ejecutamos el siguiente comendo:
 
 ### links de los videos:
 
-- https://www.youtube.com/watch?v=CV_Uf3Dq-EU&ab_channel=PeladoNerd | Desde minuto 57
+- https://www.youtube.com/watch?v=CV_Uf3Dq-EU&ab_channel=PeladoNerd | Terminado
 - https://www.youtube.com/watch?v=4Dko5W96WHg&ab_channel=HolaMundo | Falta
 - https://www.youtube.com/watch?v=9eTVZwMZJsA&ab_channel=RingaTech | Falta
 - https://www.youtube.com/watch?v=dPh2C6kswPQ&ab_channel=RingaTech | Falta
