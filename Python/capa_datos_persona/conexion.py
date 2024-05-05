@@ -19,7 +19,7 @@ class Conexion:
                                            user = cls._USERNAME,
                                            password = cls._PASSWORD,
                                            port = cls._DB_PORT,
-                                           dstabase = cls._DATABASE)
+                                           database = cls._DATABASE)
                 log.debug(f'Conexion exitosa: {cls._conexion}')
                 return cls._conexion
             except Exception as e:
@@ -39,4 +39,7 @@ class Conexion:
                 sys.exit()
             else:
                 return cls._cursor
-            #video 5 min 5
+ 
+if __name__ == '__main__':
+    Conexion.obtenerConexion()
+    Conexion.obtenerCursor()
