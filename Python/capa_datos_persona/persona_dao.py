@@ -1,5 +1,6 @@
 from conexion import Conexion
 from Persona import Persona
+from logger_base import log
 class PersonaDAO:
     '''
     DAO significa: Data Access Object
@@ -18,7 +19,7 @@ class PersonaDAO:
     #Definimos los metodos de clase
     @classmethod
     def seleccionar(cls):
-         with Conexion.obetenerConexion():
+         with Conexion.obtenerConexion():
              with Conexion.obtenerCursor() as cursor:
                  cursor.execute(cls._SELECCIONAR)
                  registros = cursor.fetchall()
@@ -26,5 +27,10 @@ class PersonaDAO:
                  for regristro in registros:
                      persona = Persona(regristro[0],regristro[1], regristro[2], regristro[3])
                      personas.append(persona)
-                     
+                 return personas
+            
+if __name__ == '__main__':
+    personas = PersonaDAO.seleccionar()
+    for persona in personas:
+        log.debug(persona)
     
