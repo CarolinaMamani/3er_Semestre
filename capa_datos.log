@@ -38,3 +38,7 @@
 08:57:27 PM:DEBUG [conexion.py:23] Conexion exitosa: <connection object at 0x0000021B05D82790; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5433', closed: 0>
 08:58:45 PM:DEBUG [conexion.py:23] Conexion exitosa: <connection object at 0x00000175A2CE2790; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5433', closed: 0>
 08:58:45 PM:ERROR [conexion.py:38] Ocurrio un error: 'NoneType' object has no attribute 'cursor'
+09:01:03 PM:DEBUG [conexion.py:23] Conexion exitosa: <connection object at 0x000001C0E4492790; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5433', closed: 0>
+09:01:03 PM:ERROR [conexion.py:38] Ocurrio un error: 'NoneType' object has no attribute 'cursor'
+09:01:45 PM:DEBUG [conexion.py:23] Conexion exitosa: <connection object at 0x00000213E30A2790; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5433', closed: 0>
+09:01:45 PM:DEBUG [conexion.py:35] Se abrio correctamente el cursor: <cursor object at 0x00000213E4DDF680; closed: 0>
