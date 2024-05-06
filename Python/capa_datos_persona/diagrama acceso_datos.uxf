@@ -1,8 +1,8 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLPackage</id><coordinates><x>0</x><y>0</y><w>590</w><h>840</h></coordinates><panel_attributes>acceso_datos
+<diagram program="umletino" version="15.1"><zoom_level>11</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLPackage</id><coordinates><x>55</x><y>0</y><w>649</w><h>924</h></coordinates><panel_attributes>acceso_datos
 --
 
 
-fg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>90</y><w>210</w><h>290</h></coordinates><panel_attributes>conexion
+fg=white</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>121</x><y>99</y><w>231</w><h>319</h></coordinates><panel_attributes>conexion
 --
 _-DATABASE: String_
 _-PASSWORD: String_
@@ -22,7 +22,7 @@ Responsabilidades:
 Administrar la conexion a
  la base de datos
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>90</y><w>210</w><h>190</h></coordinates><panel_attributes>Persona
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>418</x><y>99</y><w>231</w><h>209</h></coordinates><panel_attributes>Persona
 --
 -id_persona: int
 -nombre: String
@@ -35,7 +35,7 @@ detalles de los atributos)
 --
 Responsabilidades:
 Crear objetos de la entidad de 
-Persona</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>440</y><w>200</w><h>360</h></coordinates><panel_attributes>PersonaDao
+Persona</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>418</x><y>484</y><w>220</w><h>396</h></coordinates><panel_attributes>PersonaDao
 (data acces object)
 --
 (van a ser constantes)
@@ -58,4 +58,4 @@ _+eliminar(cls, persona)_
 Responsabilidades:
 Realizar las operaciones sobre la 
 base de datos de la entidad 
-Persona</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>370</y><w>200</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>180;130;10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>270</y><w>30</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;170;10;10</additional_attributes></element></diagram>
+Persona</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>407</y><w>220</w><h>165</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>180;130;10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>517</x><y>297</y><w>33</w><h>209</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;170;10;10</additional_attributes></element></diagram>
