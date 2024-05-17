@@ -1,0 +1,15 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLPackage</id><coordinates><x>30</x><y>70</y><w>370</w><h>610</h></coordinates><panel_attributes>Pixels Variables
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>110</y><w>150</w><h>170</h></coordinates><panel_attributes>ShadowsTemple
+--
+Layers:
+6 light enviroment
+5 light enviroment
+4 shadow enviroment
+3 shadow enviroment
+2 light
+1 shadow
+0 base pixel</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>350</y><w>210</w><h>70</h></coordinates><panel_attributes>Data
+--
+id: Long="36548"
+[waiting for message]</panel_attributes><additional_attributes></additional_attributes></element></diagram>
