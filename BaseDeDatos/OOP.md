@@ -47,3 +47,5 @@ Existen las jerarquías.
 - Se deben implementar todos los métodos abstractos, incluso si no tienen sentido en la clase hija.
 
 Una única clase puede tener múltiples interfaces (ver UML).
+
+Empece a ver un curso gratuiti de OOP para entender mejor
