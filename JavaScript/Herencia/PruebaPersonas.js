@@ -32,11 +32,7 @@ class Persona{
         this._edad= edad;
     }
     toString(){
-        return`
-        ${this._idPersona}
-        ${this._nombre}
-        ${this._apellido}
-        ${this._edad} `;
+        return`${this._idPersona} ${this._nombre} ${this._apellido} ${this._edad} `;
     }
 
 }
@@ -95,3 +91,12 @@ class Cliente extends Persona{
     }
 
 }
+
+
+//Prueba clase Persona
+let persona1 = new Persona('Ami','Kawashiri',24);
+console.log(persona1.toString());
+
+let persona2 = new Persona('Ines','Fujiki',70);
+console.log(persona2.toString());
+
