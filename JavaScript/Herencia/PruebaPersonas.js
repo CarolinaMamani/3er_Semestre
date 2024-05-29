@@ -38,29 +38,31 @@ class Persona{
 }
 
 class Empleado extends Persona{
+
     static contadorEmpleado = 0;
 
-    constructor(nombre, apellido, edad, sueldo){
+    constructor(nombre, apellido, edad, sueldo){ //agregamos el atributo de sueldo
         super(nombre, apellido, edad);
         this._idEmpleado = ++Empleado.contadorEmpleado;
         this._sueldo = sueldo;
-    }
 
-    get idEmpleado(){
+    }
+    get idEmeplado(){
         return this._idEmpleado;
     }
+
     get sueldo(){
         return this._sueldo;
     }
     set sueldo(sueldo){
         this._sueldo = sueldo;
     }
+
     toString(){
-        return`
-        ${super.toString}
-        ${this._idEmpleado}
-        ${this._sueldo}`;
+        return `${super.toString()} ${this._idEmeplado} ${this._sueldo}`;
     }
+
+
 }
 
 class Cliente extends Persona{
@@ -100,3 +102,9 @@ console.log(persona1.toString());
 let persona2 = new Persona('Ines','Fujiki',70);
 console.log(persona2.toString());
 
+//Prueba de la clase empleado
+let empleado1 = new Empleado('Carolina','Mamani',27,20000000);
+console.log(empleado1.toString());
+
+let empleado2 = new Empleado('Celia','Mamani',29,30000000);
+console.log(empleado2.toString());
