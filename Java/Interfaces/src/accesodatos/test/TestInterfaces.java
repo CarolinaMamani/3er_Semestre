@@ -5,6 +5,7 @@ import accesodatos.*;
 public class TestInterfaces {
     public static void main(String[] args) {
 
+        // Estamos viendo la base de todo lo que utilizan los frameworks
         // Polimorfismo pero en Interfaces(comportamiento):
 
         IAccesoDatos datos = new ImplementacionMysql();
