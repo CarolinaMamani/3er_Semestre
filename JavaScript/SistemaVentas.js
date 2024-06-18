@@ -53,6 +53,22 @@ class Orden{
         }
     }//fin del motodo agregaProducto
 
+    calcularTotal(){
+        let totalVenta = 0;
+        for(let producto of this._productos){//ciclo for simplificado
+            totalVenta += producto.precio;
+        }
+        return totalVenta;
+    }//fin del metodo calcularTotal
+
+    mostrarOrden(){
+        let productosOrden = ' '; //cadena vacia
+        for(let producto of this._productos){
+            productosOrden += producto.toString()+' ';
+        }
+        console.log(`Orden: ${this._idOrden}, total: $${this.calcularTotal}, productos: ${productosOrden}`)
+    }//fin del metodo mostrarOrden
+
 }// fin de la clase Orden
 
 
