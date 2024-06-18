@@ -22,9 +22,39 @@ class Producto{
     }
 
     toString(){//Templete Literals: nos permite insertar codigo dinamicamente
-        return`idProducto : ${this._idProducto}, nombre: ${this._nombre}, precio: $${this._precio}`;
+        return `idProducto : ${this._idProducto}, nombre: ${this._nombre}, precio: $${this._precio}`;
     }
 }//Fin del a clase producto
+
+class Orden{
+    static contadorOrdenes = 0;
+    static getMAX_PRODUCTOS (){
+        return 5;
+    }
+
+    constructor(){
+        this._idOrden = ++Orden.contadorOrdenes;
+        this._productos = []; //arreglo vacio para recibir cada uno de los productos
+        this._contadorProductosAgregados = 0;
+    }
+
+    get idOrden(){
+        return this._idOrden;
+    }
+
+    //Metodos:
+    agregarProducto(producto){
+        if(this._productos.length < Orden.getMAX_PRODUCTOS()){
+            this._productos.push(producto); //con push agregamos el producto. Sintaxis 1
+            //this._productos[this._contadorProductosAgregados++] = producto; //Sintaxis 2
+        }
+        else{
+            console.log('No se puede agregar mas productos');
+        }
+    }//fin del motodo agregaProducto
+
+}// fin de la clase Orden
+
 
 let producto1 = new Producto('Pantalon', 120);
 let producto2 = new Producto('Remera', 140);
