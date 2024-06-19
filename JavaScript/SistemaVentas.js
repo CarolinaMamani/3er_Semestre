@@ -28,7 +28,7 @@ class Producto{
 
 class Orden{
     static contadorOrdenes = 0;
-    static getMAX_PRODUCTOS (){
+    static getMAX_PRODUCTOS (){ //simula una constante
         return 5;
     }
 
@@ -64,9 +64,9 @@ class Orden{
     mostrarOrden(){
         let productosOrden = ' '; //cadena vacia
         for(let producto of this._productos){
-            productosOrden += producto.toString()+' ';
+            productosOrden += '\n{ '+producto.toString()+' }';
         }
-        console.log(`Orden: ${this._idOrden}, total: $${this.calcularTotal}, productos: ${productosOrden}`)
+        console.log(`Orden: ${this._idOrden}, Total: $${this.calcularTotal()}, Productos: ${productosOrden}`);
     }//fin del metodo mostrarOrden
 
 }// fin de la clase Orden
@@ -74,5 +74,23 @@ class Orden{
 
 let producto1 = new Producto('Pantalon', 120);
 let producto2 = new Producto('Remera', 140);
+let producto3 = new Producto('Cuaderno',15);
+let producto4 = new Producto('iPad pro 12 M2 + Pen', 1300)
+
 console.log(producto1.toString());
 console.log(producto2.toString());
+
+//Creamos una orden
+let orden1 = new Orden();
+let orden2 = new Orden();
+orden1.agregarProducto(producto1);
+orden1.agregarProducto(producto2);
+orden1.agregarProducto(producto3);
+orden1.agregarProducto(producto4);
+orden1.agregarProducto(producto1);
+orden2.agregarProducto(producto2);
+orden1.agregarProducto(producto3);
+orden1.agregarProducto(producto4);
+
+orden1.mostrarOrden();
+orden2.mostrarOrden();
