@@ -49,25 +49,25 @@ class PersonaDAO:
     def eliminar(cls, persona):
         with CursorDelPool() as cursor:
             valores = (persona.id_persona, )
-            cursor.execute(cls.eliminar, valores)
+            cursor.execute(cls._ELIMINAR, valores)
             log.debug(f'Los objetos eliminados son: {persona}')
             return cursor.rowcount
 
 if __name__ == '__main__':
     # Eliminar un registro:
-  #  persona1 = Persona(id_persona=1)
-   # persona_eliminadas = PersonaDAO.eliminar(persona1)
-    #log.debug(f'Personas Eliminadas: {persona_eliminadas}')
+   persona1 = Persona(id_persona=5)
+   persona_eliminadas = PersonaDAO.eliminar(persona1)
+   log.debug(f'Personas Eliminadas: {persona_eliminadas}')
     
     
     # Actualizar un registro
-    #persona1 = Persona(1, 'Kai', 'Zoka', 'zoki@mail.com')
-    #personas_actualizadas = PersonaDAO.actualizar(persona1)
-   # log.debug(f'Personas actualizadas: {personas_actualizadas}')
+   persona1 = Persona(1, 'Deo', 'Mecha', 'demech@mail.com')
+   personas_actualizadas = PersonaDAO.actualizar(persona1)
+   log.debug(f'Personas actualizadas: {personas_actualizadas}')
     
     
     # Insertar un registro
-   persona1 = Persona(nombre='Tokito', apellido='Kit', email='tokotik@mail.com')
+   persona1 = Persona(nombre='Kabaneri', apellido='Yun', email='tokotik@mail.com')
    personas_insertadas = PersonaDAO.insertar(persona1)
    log.debug(f'Personas insertadas: {personas_insertadas}')
     
