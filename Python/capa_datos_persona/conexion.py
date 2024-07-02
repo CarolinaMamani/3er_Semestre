@@ -15,12 +15,15 @@ class Conexion:
       
     @classmethod
     def obtenerConexion(cls):
-        pass
+        conexion = cls.obtenerPool().getconn() #objeto de pool de conecciones, metodo getconn manda un abjeto hacia la base de datos
+        log.debug(f'Conexion obtenida del pool: {conexion}')
+        return conexion
     
     @classmethod
     def obtenerCursor(cls):
         pass
     
+    #Pool de conecciones:
     @classmethod
     def obtenerPool(cls):
         if cls._pool is None:
