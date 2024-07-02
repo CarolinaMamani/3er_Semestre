@@ -24,3 +24,10 @@ class CursorDelPool:
         self._cursor.close()#cerramos la conexion del cursor
         Conexion.liberarConexion(self._conexion) #liberamos
         
+        
+if __name__== '__main__':
+    with CursorDelPool() as cursor:
+        log.debug('estamos dentro del bloque with')
+        cursor.execute('SELECT * FROM persona')
+        log.debug(cursor.fetchall())
+        
