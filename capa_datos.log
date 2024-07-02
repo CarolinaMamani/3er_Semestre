@@ -236,3 +236,69 @@
 09:30:24 AM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
 09:30:24 AM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion
 09:30:24 AM:DEBUG [conexion.py:51] Regresamos la conexion del pool: <connection object at 0x000001CA03FC3890; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5433', closed: 0>
+09:46:33 AM:DEBUG [cursor_del_pool.py:11] Inicio del metodo with y __enter__
+09:46:33 AM:DEBUG [conexion.py:38] creacion del pol exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001E4DA748730>
+09:46:33 AM:DEBUG [conexion.py:19] Conexion obtenida del pool: <connection object at 0x000001E4D8673AB0; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5433', closed: 0>
+09:46:34 AM:DEBUG [cursor_del_pool.py:17] Se ejecuta el metodo exit
+09:46:34 AM:DEBUG [cursor_del_pool.py:23] Commit de la transaccion
+09:46:34 AM:DEBUG [conexion.py:51] Regresamos la conexion del pool: <connection object at 0x000001E4D8673AB0; dsn: 'user=postgres password=xxx dbname=test_bd host=127.0.0.1 port=5433', closed: 0>
+09:46:34 AM:DEBUG [persona_dao.py:78] 
+            Id Persona: 1, 
+            Nombre: Kai, 
+            Apellido: Zoka, 
+            Email: zoki@mail.com
+        
+09:46:34 AM:DEBUG [persona_dao.py:78] 
+            Id Persona: 2, 
+            Nombre: Karo, 
+            Apellido: Mamani, 
+            Email: cmamani@gmail.com
+        
+09:46:34 AM:DEBUG [persona_dao.py:78] 
+            Id Persona: 3, 
+            Nombre: Invane, 
+            Apellido: Matriz, 
+            Email: inove@gmail.com
+        
+09:46:34 AM:DEBUG [persona_dao.py:78] 
+            Id Persona: 9, 
+            Nombre: Maria, 
+            Apellido: Llanos, 
+            Email: maloi@mail.com
+        
+09:46:34 AM:DEBUG [persona_dao.py:78] 
+            Id Persona: 10, 
+            Nombre: Luwrty, 
+            Apellido: Mayri, 
+            Email: melu@mail.com
+        
+09:46:34 AM:DEBUG [persona_dao.py:78] 
+            Id Persona: 11, 
+            Nombre: Roger, 
+            Apellido: Waterson, 
+            Email: rabit@mail.com
+        
+09:46:34 AM:DEBUG [persona_dao.py:78] 
+            Id Persona: 12, 
+            Nombre: Aroow, 
+            Apellido: Jita, 
+            Email: arrocito@mail.com
+        
+09:46:34 AM:DEBUG [persona_dao.py:78] 
+            Id Persona: 13, 
+            Nombre: Lulu, 
+            Apellido: Ruru, 
+            Email: rulu@mail.com
+        
+09:46:34 AM:DEBUG [persona_dao.py:78] 
+            Id Persona: 14, 
+            Nombre: Lulu, 
+            Apellido: Ruru, 
+            Email: rulu@mail.com
+        
+09:46:34 AM:DEBUG [persona_dao.py:78] 
+            Id Persona: 15, 
+            Nombre: Amel, 
+            Apellido: Chulala, 
+            Email: chula@mail.com
+        
