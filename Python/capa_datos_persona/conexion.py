@@ -9,7 +9,7 @@ class Conexion:
     _DB_PORT = '5433'
     _HOST = '127.0.0.1'
     _MIN_CON = 1 #minimo de conecciones del connection pool
-    _MAX_CON = 5 # no colocar tantos
+    _MAX_CON = 5 # no colocar tantos, ya que consume muchos recursos. No son necesarion tantos porque estos objetos se liberan y se pueden volver a usar, se libera para ser reutilizado por otro clientes
     _pool = None
     
       
@@ -36,6 +36,7 @@ class Conexion:
                                                       port = cls._DB_PORT,
                                                       database = cls._DATABASE)
                 log.debug(f'creacion del pol exitosa: {cls._pool}')
+                return cls._pool
             except Exception as e:
                 log.error(f'Ocurrio un error al obtener el pool: {e}')
                 sys.exit()#salida de la coneccion
@@ -43,4 +44,8 @@ class Conexion:
             return cls._pool
     
 if __name__ == '__main__':
-    pass
+    conexion1 = Conexion.obtenerConexion() # primero objeto de conexion
+    conexion2 = Conexion.obtenerConexion() # segundo objeto ""
+    conexion3 = Conexion.obtenerConexion() # tercer objeto ""
+    conexion4 = Conexion.obtenerConexion()
+    conexion5 = Conexion.obtenerConexion()
