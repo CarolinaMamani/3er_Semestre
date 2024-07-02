@@ -42,6 +42,14 @@ class Conexion:
                 sys.exit()#salida de la coneccion
         else:
             return cls._pool
+        
+        
+        
+    @classmethod
+    def liberarConexion(cls, conexion):
+        cls.obtenerPool().putconn(conexion) #aca liberamos el objeto, putconn regresa el objeto que ya no se utiliza al pool de conexiones para que este disponible
+        log.debug(f'Regresamos la conexion del pool: {conexion}')
+        
     
 if __name__ == '__main__':
     conexion1 = Conexion.obtenerConexion() # primero objeto de conexion
