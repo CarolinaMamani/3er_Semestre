@@ -67,13 +67,13 @@ if __name__ == '__main__':
     
     
     # Insertar un registro
-   # persona1 = Persona(nombre='Amel', apellido='Chulala', email='chula@mail.com')
-   # personas_insertadas = PersonaDAO.insertar(persona1)
-   # log.debug(f'Personas insertadas: {personas_insertadas}')
+   persona1 = Persona(nombre='Tokito', apellido='Kit', email='tokotik@mail.com')
+   personas_insertadas = PersonaDAO.insertar(persona1)
+   log.debug(f'Personas insertadas: {personas_insertadas}')
     
     
     # Seleccionar objetos
-    personas = PersonaDAO.seleccionar()
-    for persona in personas:
-        log.debug(persona)
+   personas = PersonaDAO.seleccionar()
+   for persona in personas:
+     log.debug(persona)
     
