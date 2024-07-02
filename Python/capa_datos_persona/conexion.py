@@ -50,10 +50,18 @@ class Conexion:
         cls.obtenerPool().putconn(conexion) #aca liberamos el objeto, putconn regresa el objeto que ya no se utiliza al pool de conexiones para que este disponible
         log.debug(f'Regresamos la conexion del pool: {conexion}')
         
+    @classmethod
+    def cerrarConexones(cls):
+        cls.obtenerPool().closeall()
+        
     
 if __name__ == '__main__':
     conexion1 = Conexion.obtenerConexion() # primero objeto de conexion
+    Conexion.liberarConexion(conexion1)
     conexion2 = Conexion.obtenerConexion() # segundo objeto ""
+    Conexion.liberarConexion(conexion2)
     conexion3 = Conexion.obtenerConexion() # tercer objeto ""
+    Conexion.liberarConexion(conexion3)
     conexion4 = Conexion.obtenerConexion()
     conexion5 = Conexion.obtenerConexion()
+    conexion6 = Conexion.obtenerConexion() # se puede crear la 6 conexion porque los otros objetos ya estan liberados
