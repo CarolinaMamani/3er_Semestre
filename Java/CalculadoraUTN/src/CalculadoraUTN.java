@@ -10,17 +10,7 @@ public class CalculadoraUTN {
 
 
             System.out.println("******* Aplicacion Calculadora *******");
-
-            //Mostramos el menu
-            System.out.println("""
-                    1. Suma
-                    2. Resta
-                    3. Multiplicacion
-                    4. Division
-                    5. Salir
-                    """);
-            System.out.print("Operacion a realizar? ");
-
+            mostrarMenu(); //cargamos todo el menu llamando la clase
 
             try {
                 var operacion = Integer.parseInt(entrada.nextLine()); //lee el tipo de operacion que eligio el usuario
@@ -70,4 +60,16 @@ public class CalculadoraUTN {
             }
         }//fin del ciclo while
     }//fin del main
+
+    private static void mostrarMenu(){
+        //Mostramos el menu
+        System.out.println("""
+                    1. Suma
+                    2. Resta
+                    3. Multiplicacion
+                    4. Division
+                    5. Salir
+                    """);
+        System.out.print("Operacion a realizar? ");
+    }
 }// fin de la clase
