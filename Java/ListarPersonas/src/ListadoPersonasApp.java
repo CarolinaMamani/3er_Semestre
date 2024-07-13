@@ -52,18 +52,21 @@ public class ListadoPersonasApp {
                 var persona = new Persona(nombre, tel, email);
                 //agregamos la persona a la lista
                 personas.add(persona);
-                System.out.println("Tienes  "+personas.size()+"persona tuyas uwu");
+                System.out.println("Tienes  "+personas.size()+" persona tuyas uwu");
             }
             case 2 -> {
                 System.out.println("Tu listado!  ");
                 //Mejoras con lamba y el metodo de referencia
                // personas.forEach((persona) -> System.out.println(persona));
                 personas.forEach(System.out::println); //el :: es el metodo de referencia
-            }//fin caso 2
-
-
-        }
-
+            }
+            case 3 -> {
+                System.out.println("Te veo banana u w e");
+                salir = true;
+            }
+            default -> System.out.println("Ehnn te equivaste "+opcion);
+        }//fin switch
+        return salir;
 
     }//fin del metodo ejecutarOperacion
 
