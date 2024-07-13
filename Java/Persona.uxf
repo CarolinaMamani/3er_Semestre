@@ -4,7 +4,7 @@
 -nombre: String
 -tel: String
 -email: String
--numeroPersonas: int
+_-numeroPersonas: int_
 --
 +getId()
 +setId(id:int)
