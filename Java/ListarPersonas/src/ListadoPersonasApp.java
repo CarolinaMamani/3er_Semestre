@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,6 +13,14 @@ public class ListadoPersonasApp {
         var salir = false;
         while (!salir){
             mostrarMenu();
+
+            //para cualquier tipo de error que se pueda generar
+            try{
+                salir = ejecutarOperacion(entrada, personas);
+            } catch (Exception e){
+                System.out.println("ERROR!!: "+ e.getMessage());
+            }
+
             System.out.println();//un salto de linea
         }//fin de ciclo while
     }//fin del metodo main
@@ -25,5 +34,10 @@ public class ListadoPersonasApp {
                 3. Salir
                 """);
         System.out.print("Que opcion queres >:3 ?   ");
-    }
-}
+    }//fin de metodo mostrarMenu
+
+    private static boolean ejecutarOperacion(Scanner entrada, List<Persona> personas){
+
+    }//fin del metodo ejecutarOperacion
+
+}//fin clase listadopersonas
