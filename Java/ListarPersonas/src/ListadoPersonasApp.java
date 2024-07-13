@@ -37,6 +37,25 @@ public class ListadoPersonasApp {
     }//fin de metodo mostrarMenu
 
     private static boolean ejecutarOperacion(Scanner entrada, List<Persona> personas){
+        var opcion = Integer.parseInt(entrada.nextLine());//recibimos la info que nos pasa el usuario
+        var salir = false;
+        //Revisamos la opcion degitada a traves de un switch
+        switch (opcion){
+            case 1 -> {//agregar una persona a la lista
+                System.out.print("Nombre: ");
+                var nombre = entrada.nextLine();
+                System.out.print("Telefono: ");
+                var tel = entrada.nextLine();
+                System.out.print("Email: ");
+                var email = entrada.nextLine();
+                //creamos el objeto persona
+                var persona = new Persona(nombre, tel, email);
+                //agregamos la persona a la lista
+                personas.add(persona);
+                System.out.println("Tienes  "+personas.size()+"persona tuyas uwu");
+            }
+        }
+
 
     }//fin del metodo ejecutarOperacion
 
