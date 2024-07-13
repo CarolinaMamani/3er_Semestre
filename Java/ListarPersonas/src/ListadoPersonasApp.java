@@ -54,6 +54,14 @@ public class ListadoPersonasApp {
                 personas.add(persona);
                 System.out.println("Tienes  "+personas.size()+"persona tuyas uwu");
             }
+            case 2 -> {
+                System.out.println("Tu listado!  ");
+                //Mejoras con lamba y el metodo de referencia
+               // personas.forEach((persona) -> System.out.println(persona));
+                personas.forEach(System.out::println); //el :: es el metodo de referencia
+            }//fin caso 2
+
+
         }
 
 
