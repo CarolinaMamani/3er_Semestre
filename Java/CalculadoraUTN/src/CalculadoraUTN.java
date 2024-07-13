@@ -51,13 +51,13 @@ public class CalculadoraUTN {
 
     private static void ejecutarOperacion(int operacion, Scanner entrada){
         System.out.print("Digite el valor de operando1: "); //println es para que se imprima con salto de linea
-        var operando1 = Integer.parseInt(entrada.nextLine());
+        var operando1 = Double.parseDouble(entrada.nextLine());
 
         System.out.print("Digite el valor de operando2: ");
-        var operando2 = Integer.parseInt(entrada.nextLine());
+        var operando2 = Double.parseDouble(entrada.nextLine());
 
         //usamos Switch dentro del if para las operaciones del menu
-        int resultado;
+        double resultado;
         switch (operacion) {
             case 1 -> {
                 resultado = operando1 + operando2;
