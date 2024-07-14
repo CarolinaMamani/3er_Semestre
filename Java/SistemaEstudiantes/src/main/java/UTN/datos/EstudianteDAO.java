@@ -4,6 +4,8 @@ import static UTN.conexion.Conexion.getConnection;
 
 import UTN.conexion.Conexion;
 import UTN.dominio.Estudiante;
+
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -19,7 +21,19 @@ public class EstudianteDAO {
         ResultSet rs; //objeto que permite obtener el resultado desde las base de datos
 
         //creamos un objeto de tipo conexion
-        Conexion con = getConnection();
-        String sql = "SELECT * FROM estudiantes2024"
+        Connection con = getConnection();
+        String sql = "SELECT * FROM estudiantes";
+        try{
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                var estudiante = new Estudiante();
+                estudiante.setIdEstudiante(rs.getInt("idestudiantes"));
+            }
+
+        } catch (Exception e){
+            System.out.println("Ehhh error uwu "+e.getMessage());
+        }
+
     }
 }
