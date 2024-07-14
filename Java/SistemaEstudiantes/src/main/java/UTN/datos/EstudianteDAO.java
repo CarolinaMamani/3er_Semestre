@@ -2,7 +2,6 @@ package UTN.datos;
 
 import static UTN.conexion.Conexion.getConnection;
 
-import UTN.conexion.Conexion;
 import UTN.dominio.Estudiante;
 
 import java.sql.Connection;
@@ -13,7 +12,7 @@ import java.util.List;
 
 public class EstudianteDAO {
     //Metodo listar
-    public List<Estudiante> listar(){
+    public List<Estudiante> listarEstudiantes(){
         List<Estudiante> estudiantes = new ArrayList<>();
 
         //creamos algunos objetos que son necesarios para comunicarnos con la base de datos
@@ -22,7 +21,7 @@ public class EstudianteDAO {
 
         //creamos un objeto de tipo conexion
         Connection con = getConnection();
-        String sql = "SELECT * FROM estudiantes";
+        String sql = "SELECT * FROM estudiantes ORDER BY idestudiantes";
         try{
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
@@ -49,4 +48,14 @@ public class EstudianteDAO {
         }//fin finally
         return estudiantes;
     }//fin del metodo Listar estudiante
+
+    //agregamos main para la ejecucion
+    public static void main(String[] args) {
+        //1.listamos a los estudiantes
+        var estudianteDao = new EstudianteDAO();
+        System.out.println("Listado de los estudiantes: ");
+        List<Estudiante> estudiantes = estudianteDao.listarEstudiantes();
+        estudiantes.forEach(System.out::println); //Funcion llamda para imprimir
+
+    }
 }
