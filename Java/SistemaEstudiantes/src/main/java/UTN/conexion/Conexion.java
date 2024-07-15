@@ -11,7 +11,7 @@ public class Conexion {
         var baseDatos = "estudiantes2024";
         var url = "jdbc:mysql://localhost:3306/"+baseDatos;
         var usuario = "root";
-        var password = "admin";
+        var password = "my*7ur9x";
 
         //cargamos la clase del driver de mysql en memoria
         try{

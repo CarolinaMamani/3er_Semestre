@@ -49,6 +49,36 @@ public class EstudianteDAO {
         return estudiantes;
     }//fin del metodo Listar estudiante
 
+    //metodo por id -> fin by id
+    public boolean buscarEstudiantePorId(Estudiante estudiante){
+        PreparedStatement ps;
+        ResultSet rs;
+        Connection con = getConnection();
+        String sql = "SELECT * FROM estudiantes WHERE idestudiantes=?";
+        try{
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, estudiante.getIdEstudiante());
+            rs = ps.executeQuery();
+            if (rs.next()){
+                estudiante.setNombre(rs.getString("nombre"));
+                estudiante.setApellido(rs.getString("apellido"));
+                estudiante.setTelefono(rs.getString("telefono"));
+                estudiante.setEmail(rs.getString("email"));
+                return true; //se encontro el regitro
+            }//fin del if
+        } catch (Exception e){
+            System.out.println("Errrror owwwwwo no ecuentro el estudiante  "+e.getMessage());
+        }
+        finally {
+            try{
+                con.close();
+            } catch (Exception e){
+                System.out.println("Noppp error al cerrar tu conexion "+e.getMessage());
+            }//fin catch
+        }//fin finally
+        return false;
+    }
+
     //agregamos main para la ejecucion
     public static void main(String[] args) {
         //1.listamos a los estudiantes
