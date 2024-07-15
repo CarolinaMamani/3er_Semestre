@@ -8,6 +8,7 @@ import java.lang.reflect.GenericArrayType;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,6 +79,23 @@ public class EstudianteDAO {
             }//fin catch
         }//fin finally
         return false;
+    }
+
+    //Metodo agregar un nuevo estudiante
+    public boolean agregarEstudiante(Estudiante estudiante){
+        PreparedStatement ps;
+        Connection con = getConnection();
+        String sql = "INSERT INTO estudiantes2024 (nombre, apellido, telefono, email) VALUES (?, ?, ?, ?)";
+        try{
+            ps = con.prepareStatement(sql);
+            ps.setString(1, estudiante.getNombre());
+            ps.setString(2, estudiante.getApellido());
+            ps.setString(3, estudiante.getTelefono());
+            ps.setString(4, estudiante.getEmail());
+        }catch (Exception e){
+            System.out.println("UIUIUI Error en agregar ese ninio "+e.getMessage());
+        }
+        return ;
     }
 
     //agregamos main para la ejecucion
