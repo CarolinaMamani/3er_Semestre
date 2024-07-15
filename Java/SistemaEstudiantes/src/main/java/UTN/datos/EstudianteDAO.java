@@ -137,11 +137,20 @@ public class EstudianteDAO {
 
     //agregamos main para la ejecucion
     public static void main(String[] args) {
-        //1.listamos a los estudiantes
         var estudianteDao = new EstudianteDAO();
+
+        //1.listamos a los estudiantes
         System.out.println("Listado de los estudiantes: ");
         List<Estudiante> estudiantes = estudianteDao.listarEstudiantes();
         estudiantes.forEach(System.out::println); //Funcion llamda para imprimir
+
+        //Modificar estudiante
+        var estianteModificado = new Estudiante(1, "Hoja", "Lata","11452254","hojalata@mail");
+        var modificado = estudianteDao.modificarEstudiante(estianteModificado);
+        if (modificado)
+            System.out.println("Te lo tunee B)  "+estianteModificado);
+        else
+            System.out.println("Ay no se pudo negri :c  "+estianteModificado);
 
         //Agregar estudiante
    //     var nuevoEstudiante = new Estudiante("Suzana","Horia","1445511","suzanahoria@mail");
