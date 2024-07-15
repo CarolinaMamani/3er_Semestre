@@ -107,6 +107,34 @@ public class EstudianteDAO {
         return false;
     }//fin metodo agregarEstudiante
 
+
+    //Metodo para modificar
+    public boolean modificarEstudiante(Estudiante estudiante){
+        PreparedStatement ps;
+        Connection con = getConnection();
+        String sql = "UPDATE estudiantes SET nombre=?, apellido=?, telefono=?, email=? WHERE idestudiantes=?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, estudiante.getNombre());
+            ps.setString(2, estudiante.getApellido());
+            ps.setString(3, estudiante.getTelefono());
+            ps.setString(4, estudiante.getEmail());
+            ps.setInt(5, estudiante.getIdEstudiante());
+            ps.execute();
+            return true;
+        } catch (Exception e){
+            System.out.println(" Uh no no lo puedo modificar perdona :I  "+e.getMessage());
+        }
+        finally {
+            try {
+                con.close();
+            } catch (Exception e){
+                System.out.println("No te lo puedo cerrar caramelo :P "+e.getMessage());
+            }
+        }//fin finally
+        return false;
+    }//fin metodo modificarEstudiante
+
     //agregamos main para la ejecucion
     public static void main(String[] args) {
         //1.listamos a los estudiantes
@@ -116,12 +144,12 @@ public class EstudianteDAO {
         estudiantes.forEach(System.out::println); //Funcion llamda para imprimir
 
         //Agregar estudiante
-        var nuevoEstudiante = new Estudiante("Suzana","Horia","1445511","suzanahoria@mail");
-        var agregado = estudianteDao.agregarEstudiante(nuevoEstudiante);
-        if (agregado)
-            System.out.println("Agregado a la bolsa >:3  "+nuevoEstudiante);
-        else
-            System.out.println("Ya no me entra ese nino, no se puedo che "+nuevoEstudiante);
+   //     var nuevoEstudiante = new Estudiante("Suzana","Horia","1445511","suzanahoria@mail");
+    //    var agregado = estudianteDao.agregarEstudiante(nuevoEstudiante);
+     //   if (agregado)
+      //      System.out.println("Agregado a la bolsa >:3  "+nuevoEstudiante);
+       // else
+         //   System.out.println("Ya no me entra ese nino, no se puedo che "+nuevoEstudiante);
 
 
 
