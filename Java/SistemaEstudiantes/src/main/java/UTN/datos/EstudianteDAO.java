@@ -115,14 +115,24 @@ public class EstudianteDAO {
         List<Estudiante> estudiantes = estudianteDao.listarEstudiantes();
         estudiantes.forEach(System.out::println); //Funcion llamda para imprimir
 
+        //Agregar estudiante
+        var nuevoEstudiante = new Estudiante("Suzana","Horia","1445511","suzanahoria@mail");
+        var agregado = estudianteDao.agregarEstudiante(nuevoEstudiante);
+        if (agregado)
+            System.out.println("Agregado a la bolsa >:3  "+nuevoEstudiante);
+        else
+            System.out.println("Ya no me entra ese nino, no se puedo che "+nuevoEstudiante);
+
+
+
         //Buscar por Id
-        var estudiante1 = new Estudiante(1);
-        System.out.println("Antes de buscar, estudiante es : "+estudiante1);
-        var encontrado = estudianteDao.buscarEstudiantePorId(estudiante1);
-        if (encontrado) //si es true, (se encontro)
-            System.out.println("Lo encontre!!! >:DDD adasdfads es: "+estudiante1);
-        else //si no
-            System.out.println("Pucha, ta dificil no lo encontre :(  "+estudiante1.getIdEstudiante());
+  //      var estudiante1 = new Estudiante(1);
+   //     System.out.println("Antes de buscar, estudiante es : "+estudiante1);
+   //     var encontrado = estudianteDao.buscarEstudiantePorId(estudiante1);
+  //      if (encontrado) //si es true, (se encontro)
+   //         System.out.println("Lo encontre!!! >:DDD adasdfads es: "+estudiante1);
+   //     else //si no
+    //        System.out.println("Pucha, ta dificil no lo encontre :(  "+estudiante1.getIdEstudiante());
 
 
     }
