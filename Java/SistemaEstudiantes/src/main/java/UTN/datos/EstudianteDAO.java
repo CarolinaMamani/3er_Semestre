@@ -4,6 +4,7 @@ import static UTN.conexion.Conexion.getConnection;
 
 import UTN.dominio.Estudiante;
 
+import java.lang.reflect.GenericArrayType;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -86,6 +87,16 @@ public class EstudianteDAO {
         System.out.println("Listado de los estudiantes: ");
         List<Estudiante> estudiantes = estudianteDao.listarEstudiantes();
         estudiantes.forEach(System.out::println); //Funcion llamda para imprimir
+
+        //Buscar por Id
+        var estudiante1 = new Estudiante(1);
+        System.out.println("Antes de buscar, estudiante es : "+estudiante1);
+        var encontrado = estudianteDao.buscarEstudiantePorId(estudiante1);
+        if (encontrado) //si es true, (se encontro)
+            System.out.println("Lo encontre!!! >:DDD adasdfads es: "+estudiante1);
+        else //si no
+            System.out.println("Pucha, ta dificil no lo encontre :(  "+estudiante1.getIdEstudiante());
+
 
     }
 }
