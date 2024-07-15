@@ -92,11 +92,20 @@ public class EstudianteDAO {
             ps.setString(2, estudiante.getApellido());
             ps.setString(3, estudiante.getTelefono());
             ps.setString(4, estudiante.getEmail());
+            ps.execute();
+            return true;
         }catch (Exception e){
             System.out.println("UIUIUI Error en agregar ese ninio "+e.getMessage());
-        }
-        return ;
-    }
+        }//fin catch
+        finally {
+            try{
+                con.close();
+            } catch (Exception e){
+                System.out.println("No se pudo mami :/ sigue abierta la conexion: "+e.getMessage());
+            }
+        }//fin finally
+        return false;
+    }//fin metodo agregarEstudiante
 
     //agregamos main para la ejecucion
     public static void main(String[] args) {
