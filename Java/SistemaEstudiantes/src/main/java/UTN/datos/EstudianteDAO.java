@@ -135,6 +135,31 @@ public class EstudianteDAO {
         return false;
     }//fin metodo modificarEstudiante
 
+    //Metodo para eliminar
+    public boolean eliminarEstudiante(Estudiante estudiante){
+        PreparedStatement ps;
+        Connection con = getConnection();
+        String sql = "DELETE FROM estudiantes WHERE idestudiantes = ?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setInt(1,estudiante.getIdEstudiante());
+            ps.execute();
+            return true;
+        }catch (Exception e){
+            System.out.println("EEPPP no se puedo aniquilar ://  "+e.getMessage());
+        }
+        finally {
+            try {
+                con.close();
+            }catch (Exception e){
+                System.out.println("Nop te lo abro ee  "+e.getMessage());
+            }
+        }//fin de finally
+        return false;
+    }//fin metodo eliminarEstudiante
+
+
+
     //agregamos main para la ejecucion
     public static void main(String[] args) {
         var estudianteDao = new EstudianteDAO();
@@ -144,13 +169,22 @@ public class EstudianteDAO {
         List<Estudiante> estudiantes = estudianteDao.listarEstudiantes();
         estudiantes.forEach(System.out::println); //Funcion llamda para imprimir
 
-        //Modificar estudiante
-        var estianteModificado = new Estudiante(1, "Hoja", "Lata","11452254","hojalata@mail");
-        var modificado = estudianteDao.modificarEstudiante(estianteModificado);
-        if (modificado)
-            System.out.println("Te lo tunee B)  "+estianteModificado);
+        //Eliminar estudiante con el id
+        var estudianteEliminar = new Estudiante(3);
+        var eliminado = estudianteDao.eliminarEstudiante(estudianteEliminar);
+        if(eliminado)
+            System.out.println("Ya lo aniquile >:3)b "+ estudianteEliminar);
         else
-            System.out.println("Ay no se pudo negri :c  "+estianteModificado);
+            System.out.println("asdfd Se me escapo!! "+ estudianteEliminar);
+
+
+   //     //Modificar estudiante
+    //    var estianteModificado = new Estudiante(1, "Hoja", "Lata","11452254","hojalata@mail");
+     //   var modificado = estudianteDao.modificarEstudiante(estianteModificado);
+    //    if (modificado)
+    //        System.out.println("Te lo tunee B)  "+estianteModificado);
+     //   else
+     //       System.out.println("Ay no se pudo negri :c  "+estianteModificado);
 
         //Agregar estudiante
    //     var nuevoEstudiante = new Estudiante("Suzana","Horia","1445511","suzanahoria@mail");
