@@ -73,14 +73,53 @@ public class SistemasEstudiantesApp {
                 var telefono = consola.nextLine();
                 System.out.println("Email: ");
                 var email = consola.nextLine();
-                //crar objeto estudiante sin id
+                //cramos el objeto estudiante sin el id
                 var estudiante = new Estudiante(nombre,apellido,telefono,email);
                 var agregado = estudianteDAO.agregarEstudiante(estudiante);
                 if (agregado)
                     System.out.println("Ya lo meti a la carcel :) "+estudiante);
-
+                else
+                    System.out.println("Perdona lo olvide agregar :s "+ estudiante);
             }
-        }
+            case 4 -> {
+                System.out.println("Mutacion >3 ");
+                //aqui especificaremos cual es el id del objeto a ser modificado
+                System.out.println("Id de la presa: ");
+                var idEstudiante = Integer.parseInt(consola.nextLine());
+                System.out.println("Nombre: ");
+                var nombre = consola.nextLine();
+                System.out.println("Apellido: ");
+                var apellido = consola.nextLine();
+                System.out.println("Telefono: ");
+                var telefono = consola.nextLine();
+                System.out.println("Email: ");
+                var email = consola.nextLine();
+                //crea el objeto estudiante a modificar
+                var estudiante = new Estudiante(idEstudiante,nombre,apellido,telefono,email);
+                var modificado = estudianteDAO.modificarEstudiante(estudiante);
+                if (modificado)
+                    System.out.println("Ya se transformo en: "+estudiante);
+                else
+                    System.out.println("Se nego a ser "+estudiante);
+            }
+            case 5 ->{
+                System.out.println("Aniquilacion!!!");
+                System.out.println("Id del condenado: ");
+                var idEstudiante = Integer.parseInt(consola.nextLine());
+                var estudiante = new Estudiante(idEstudiante);
+                var eliminado = estudianteDAO.eliminarEstudiante(estudiante);
+                if (eliminado)
+                    System.out.println("Ya no existe mas con nosotros u__u RIP "+estudiante);
+                else
+                    System.out.println("Huyo antes de la ejecucion: "+estudiante);
+            }
+            case 6 ->{
+                System.out.println("Adios mortal :)))))))  *baile*");
+                salir = true;
+            }
+            default -> System.out.println("No se que me hablas o w o");
+        }//fin switch
+        return salir;
     }
 
 }// fin de clase
