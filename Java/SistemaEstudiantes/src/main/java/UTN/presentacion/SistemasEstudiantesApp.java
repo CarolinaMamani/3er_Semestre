@@ -59,12 +59,12 @@ public class SistemasEstudiantesApp {
                 var estudiante = new Estudiante(idEstudiante);
                 var encontrado = estudianteDAO.buscarEstudiantePorId(estudiante);
                 if (encontrado)
-                    System.out.println("Lo encontre! >)  "+estudiante);
+                    System.out.println("Lo encontre! >:)  "+estudiante);
                 else
                     System.out.println("Se escapo! D: "+estudiante);
             }
             case 3->{
-                System.out.println("Quies es el nuevo? ");
+                System.out.println("Quien es el nuevo? ");
                 System.out.println("Nombre: ");
                 var nombre = consola.nextLine();
                 System.out.println("Apellido: ");
@@ -82,7 +82,7 @@ public class SistemasEstudiantesApp {
                     System.out.println("Perdona lo olvide agregar :s "+ estudiante);
             }
             case 4 -> {
-                System.out.println("Mutacion >3 ");
+                System.out.println("Mutacion >:3 ");
                 //aqui especificaremos cual es el id del objeto a ser modificado
                 System.out.println("Id de la presa: ");
                 var idEstudiante = Integer.parseInt(consola.nextLine());
@@ -114,7 +114,7 @@ public class SistemasEstudiantesApp {
                     System.out.println("Huyo antes de la ejecucion: "+estudiante);
             }
             case 6 ->{
-                System.out.println("Adios mortal :)))))))  *baile*");
+                System.out.println("Adios mortal :)))))))  *baile* BD");
                 salir = true;
             }
             default -> System.out.println("No se que me hablas o w o");
