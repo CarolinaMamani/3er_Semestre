@@ -48,10 +48,37 @@ public class SistemasEstudiantesApp {
         switch (opcion){
             case 1 ->{
                 System.out.println("Tu lista es: ");
-                
+                //no muestra la informacion solo recupera la info y regresa una lista
+                var estudiantes = estudianteDAO.listarEstudiantes();//recibe el listado
+                //vamos a iterar cada objeto de tipo estudiante
+                estudiantes.forEach(System.out::println);//para imprimir la lista
             }
             case 2->{
-                System.out.println();
+                System.out.println("Pasame el Id del profugo: ");
+                var idEstudiante = Integer.parseInt(consola.nextLine());
+                var estudiante = new Estudiante(idEstudiante);
+                var encontrado = estudianteDAO.buscarEstudiantePorId(estudiante);
+                if (encontrado)
+                    System.out.println("Lo encontre! >)  "+estudiante);
+                else
+                    System.out.println("Se escapo! D: "+estudiante);
+            }
+            case 3->{
+                System.out.println("Quies es el nuevo? ");
+                System.out.println("Nombre: ");
+                var nombre = consola.nextLine();
+                System.out.println("Apellido: ");
+                var apellido = consola.nextLine();
+                System.out.println("Telefono: ");
+                var telefono = consola.nextLine();
+                System.out.println("Email: ");
+                var email = consola.nextLine();
+                //crar objeto estudiante sin id
+                var estudiante = new Estudiante(nombre,apellido,telefono,email);
+                var agregado = estudianteDAO.agregarEstudiante(estudiante);
+                if (agregado)
+                    System.out.println("Ya lo meti a la carcel :) "+estudiante);
+
             }
         }
     }
